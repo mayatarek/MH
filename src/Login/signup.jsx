@@ -38,8 +38,8 @@ function SignUp(){
 
         <hr/>
         
-        <Link to="/signup" >Registered user? Log in!</Link>
-        <Link to="/homepage" style={{color: 'grey'}}>or continue as guest</Link>
+        <Link to="/login" >Registered user? Log in!</Link>
+        <Link to="/signup" style={{color: 'grey'}}>or continue as guest</Link>
         
     </div>
     )

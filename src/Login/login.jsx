@@ -11,30 +11,32 @@ function Login(){
     // }
 
     return(
-        <div class="card">
-            <h3>Login</h3>
-            <form>
-                <div style={{textAlign: 'left'}}>
-                <label>Email</label><br/>
-                <input type="email" placeholder="johndoe@gmail.com" id="email" {...register("email",{
-                pattern:{
-                    value:/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-                    message: 'Invalid email'
-                }})}/>
-                <br/>
-                <lable>Password</lable><br/>
-                <input type="password" placeholder="" id="password"/>
-                <br/>
-                </div>
-                <button style={{marginTop:12}}>submit</button>
+        <div>
+            <div class="card">
+                <h3>Login</h3>
+                <form>
+                    <div style={{textAlign: 'left'}}>
+                    <label>Email</label><br/>
+                    <input type="email" placeholder="johndoe@gmail.com" id="email" {...register("email",{
+                    pattern:{
+                        value:/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                        message: 'Invalid email'
+                    }})}/>
+                    <br/>
+                    <lable>Password</lable><br/>
+                    <input type="password" placeholder="" id="password"/>
+                    <br/>
+                    </div>
+                    <button style={{marginTop:12}}>submit</button>
 
-            </form>
+                </form>
 
-            <hr/>
-            
-            <Link to="/signup" >New user? Sign up!</Link>
-            <Link to="/homepage" style={{color: 'grey'}}>or continue as guest</Link>
-            
+                <hr/>
+                
+                <Link to="/signup" >New user? Sign up!</Link>
+                <Link to="/login" style={{color: 'grey'}}>or continue as guest</Link>
+                
+            </div>
         </div>
     )
 }
