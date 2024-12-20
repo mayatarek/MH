@@ -5,6 +5,8 @@ function SignUp(){
     const {register, handleSubmit} = useForm();
     const Navigate = useNavigate();
 
+    //add user after signup
+
     return(
         <div class="card">
         <h3>SignUp</h3>
@@ -19,9 +21,9 @@ function SignUp(){
             <label>Name</label><br/>
             <input type="text" placeholder="John Doe" id="name"/><br/>
             <label>Age</label><br/>
-            <input type="text" placeholder="23" id="name"/><br/>
+            <input type="text" placeholder="23" id="age"/><br/>
             <label>Phone number</label><br/>
-            <input type="text" placeholder="01XXXXXXXXX" id="name"/><br/>
+            <input type="text" placeholder="01XXXXXXXXX" id="number"/><br/>
             <label for="gender">Gender</label><br/>
             <select id="gender" name="gender">
             <option value="female" selected>Female</option>
@@ -39,7 +41,7 @@ function SignUp(){
         <hr/>
         
         <Link to="/login" >Registered user? Log in!</Link>
-        <Link to="/signup" style={{color: 'grey'}}>or continue as guest</Link>
+        <Link to="/homepage" style={{color: 'grey'}}>or continue as guest</Link>
         
     </div>
     )

@@ -6,9 +6,6 @@ function Login(){
 
     const {register, handleSubmit} = useForm();
     const Navigate = useNavigate();
-    // const onSubmit = (data) => {
-        
-    // }
 
     return(
         <div>
@@ -34,7 +31,7 @@ function Login(){
                 <hr/>
                 
                 <Link to="/signup" >New user? Sign up!</Link>
-                <Link to="/login" style={{color: 'grey'}}>or continue as guest</Link>
+                <Link to="/homepage" style={{color: 'grey'}}>or continue as guest</Link>
                 
             </div>
         </div>
