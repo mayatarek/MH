@@ -1,0 +1,100 @@
+  var products = [
+        {
+            'name': 'Elegant Necklace',
+            'type': 'necklace',
+            'image': '../src/assets/necklace.jpeg',
+            'details': 'A stunning piece that complements any outfit.',
+            'care tips': 'Keep away from water and perfume to maintain shine.'
+        },
+        {
+            'name': 'Golden Necklace',
+            'type': 'necklace',
+            'image': '../src/assets/necklace2.jpeg',
+            'details': 'A perfect addition for formal occasions.',
+            'care tips': 'Wipe with a soft cloth after use.'
+        },
+        {
+            'name': 'Pearl Necklace',
+            'type': 'necklace',
+            'image': '../src/assets/necklace3.jpeg',
+            'details': 'A timeless piece featuring natural pearls.',
+            'care tips': 'Store in a fabric-lined box to prevent scratches.'
+        },
+        {
+            'name': 'Silver Charm Necklace',
+            'type': 'necklace',
+            'image': '../src/assets/necklace4.jpeg',
+            'details': 'A delicate necklace with a charm centerpiece.',
+            'care tips': 'Avoid contact with harsh chemicals.'
+        },
+        {
+            'name': 'Vintage Gold Necklace',
+            'type': 'necklace',
+            'image': '../src/assets/necklace5.jpeg',
+            'details': 'A vintage design with intricate details.',
+            'care tips': 'Clean with mild soap and a soft brush.'
+        },
+        {
+            'name': 'Crystal Pendant Necklace',
+            'type': 'necklace',
+            'image': '../src/assets/necklace6.jpeg',
+            'details': 'A sparkling pendant necklace with crystals.',
+            'care tips': 'Store in a dry place to maintain brilliance.'
+        },
+        {
+            'name': 'Classic Earring',
+            'type': 'earring',
+            'image': '../src/assets/earring.jpeg',
+            'details': 'Elegant and simple earrings for everyday wear.',
+            'care tips': 'Clean with a soft microfiber cloth.'
+        },
+        {
+            'name': 'Diamond Stud Earrings',
+            'type': 'earring',
+            'image': '../src/assets/earring2.jpeg',
+            'details': 'Perfect studs with a classic diamond design.',
+            'care tips': 'Keep in a separate compartment to avoid scratches.'
+        },
+        {
+            'name': 'Hoop Earrings',
+            'type': 'earring',
+            'image': '../src/assets/earring3.jpeg',
+            'details': 'Stylish hoop earrings for a bold look.',
+            'care tips': 'Avoid wearing during physical activities.'
+        },
+        {
+            'name': 'Rose Gold Earrings',
+            'type': 'earring',
+            'image': '../src/assets/earring4.jpeg',
+            'details': 'Delicate rose gold earrings for a romantic touch.',
+            'care tips': 'Polish with a jewelry cleaning solution.'
+        },
+        {
+            'name': 'Silver Ring',
+            'type': 'ring',
+            'image': '../src/assets/ring.jpeg',
+            'details': 'A sleek silver ring for a modern look.',
+            'care tips': 'Avoid prolonged exposure to moisture.'
+        },
+        {
+            'name': 'Gold Band Ring',
+            'type': 'ring',
+            'image': '../src/assets/ring2.jpeg',
+            'details': 'A classic gold band ring for everyday wear.',
+            'care tips': 'Polish regularly with a soft cloth.'
+        },
+        {
+            'name': 'Ruby Gem Ring',
+            'type': 'ring',
+            'image': '../src/assets/ring3.jpeg',
+            'details': 'An elegant ring with a vibrant ruby centerpiece.',
+            'care tips': 'Store separately to protect the gemstone.'
+        },
+        {
+            'name': 'Diamond Ring',
+            'type': 'ring',
+            'image': '../src/assets/ring4.jpeg',
+            'details': 'A timeless diamond ring with a solitaire design.',
+            'care tips': 'Handle with care and keep in a padded box.'
+        }
+    ];
