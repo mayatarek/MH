@@ -12,6 +12,7 @@ import SignUp from './Login/SignUp.jsx'
 import Navbar from './Common/navbar.jsx'
 import Footer from './Common/Footer.jsx'
 import Homepage from './Homepage/Homepage.jsx'
+import ContactUs from './Contact Us/ContactUs.jsx'
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path="/login" element={<Login/>}/>
         <Route path="/signup" element={<SignUp/>}/>
         <Route path="/homepage" element={<Homepage/>}/>
+        <Route path="/contactus" element={<ContactUs/>}/>
       </Routes>
       <Footer/>
     </BrowserRouter>
