@@ -3,9 +3,12 @@ import ProductItem from "productItem";
 import products from "products";
 
 const productList = () =>{
+
+
+    const filteredProduct = product.filter(product => product.type === category);
     return (
         <div className = "productList">
-            {products.map((product,index)=>
+            {filteredProduct.map((product,index)=>
             
             (
                 <ProductItem key ={index} product ={product}/>
