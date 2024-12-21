@@ -1,27 +1,27 @@
 
 
-//copied from Travel sis
-function SearchBar(){
+// //copied from Travel sis
+// function SearchBar(){
 
-    return(
-        <div>
-            <div class="search-section">
-            <h1 class="titles">Search for Your Dream Destination</h1>
-            <div class="search-container">
-                <input type="text" id="searchBar" placeholder="Search for a destination..."/>
-                <button class="search-button" onClick={filter()}>
-                    <i class="fas fa-search"></i>
-                </button>
-            </div>
-            </div>
-        </div>
-    )
-}
-
-
+//     return(
+//         <div>
+//             <div class="search-section">
+//             <h1 class="titles">Search for Your Dream Destination</h1>
+//             <div class="search-container">
+//                 <input type="text" id="searchBar" placeholder="Search for a destination..."/>
+//                 <button class="search-button" onClick={filter()}>
+//                     <i class="fas fa-search"></i>
+//                 </button>
+//             </div>
+//             </div>
+//         </div>
+//     )
+// }
 
 
-function filter() {
+
+
+// function filter() {
     //implementation needs many edits
 
 
@@ -59,4 +59,22 @@ function filter() {
     // if (filteredDestinations.length === 0) {
     //     container.innerHTML = `<p class="text-center">No destinations match your search criteria.</p>`;
     // }
-}
+//}
+
+import React from 'react';
+
+const SearchBar = ({ searchQuery, setSearchQuery }) => {
+  return (
+    <div>
+      <input
+        type="text"
+        placeholder="Search by name..."
+        value={searchQuery}
+        onChange={(e) => setSearchQuery(e.target.value)}
+        style={{ padding: '8px', width: '100%' }}
+      />
+    </div>
+  );
+};
+
+export default SearchBar;
