@@ -15,11 +15,11 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: rgb(107, 106, 106);
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: #c3bfbf;
 }
 
 body {
@@ -71,7 +71,7 @@ button:focus-visible {
 .navbar {
   position: fixed; 
   top: 0; 
-  width: 95%; 
+  width: 100%; 
   z-index: 1000; 
 }
 
@@ -100,7 +100,10 @@ button:focus-visible {
 }
 
 
-#logIn{  color: #000;}
+#logInNav{  
+  color: #000;
+  margin-right: 30px;
+}
 
 
 #contactUsPic{
@@ -119,8 +122,22 @@ footer{
 
 
 
-.form-control{
+.contact{
   border-color: black;
   margin-bottom: 30px;
   margin-top: 20px;
+}
+
+
+
+#logInTitle{
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+
+.logIn{
+  border-color: black;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
