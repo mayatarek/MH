@@ -9,7 +9,7 @@ import { BrowserRouter, Routes, Route} from 'react-router-dom'
 //open terminal and run: npm install react-hook-form
 import Login from './Login/Login.jsx'
 import SignUp from './Login/SignUp.jsx'
-import Navbar from './Common/Navbar.jsx'
+import Navbar from './Common/navbar.jsx'
 import Footer from './Common/Footer.jsx'
 import Homepage from './Homepage/Homepage.jsx'
 

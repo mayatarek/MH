@@ -3,15 +3,10 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
     return (
-        <nav className="navbar">
+        <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
             <div className="container-fluid">
-                <Link
-                    className="navbar-brand"
-                    to="/home"
-                    id="logo"
-                    style={{ fontWeight: "bold" }}
-                >
-                    Travel Sis
+                <Link className="navbar-brand" to="/home" id="logo">
+                    Mystic Glow
                 </Link>
                 <button
                     className="navbar-toggler"
@@ -25,39 +20,35 @@ function Navbar() {
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNav">
-                    <ul className="navbar-nav">
+                    <ul className="navbar-nav me-auto">
                         <li className="nav-item">
-                            <Link className="nav-link" to="/home">
+                            <Link className="nav-link" to="/Homepage">
                                 Home
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link
-                                className="nav-link"
-                                to="/destinations"
-                                style={{ fontWeight: "bold", color: "rgb(73, 55, 43)" }}
-                            >
-                                Destinations
+                            <Link className="nav-link" to="/destinations">
+                                Rings
                             </Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to="/blog">
-                                Blog
+                                Bracelets
                             </Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to="/gallery">
-                                Gallery
+                                Necklaces
                             </Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to="/faqs">
-                                FAQs
+                                Earrings
                             </Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to="/contact">
-                                Contact Us
+                                About Us
                             </Link>
                         </li>
                     </ul>
@@ -68,3 +59,4 @@ function Navbar() {
 }
 
 export default Navbar;
+

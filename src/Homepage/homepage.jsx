@@ -6,6 +6,7 @@ function Homepage(){
     //fetch stuff from local storage here
     return(
         <div>
+            <img id="homePic" src="/src/assets/home3.webp"></img>
             <h3>
                 Best Selling necklaces
             </h3>
