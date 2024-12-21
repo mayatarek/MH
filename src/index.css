@@ -102,3 +102,25 @@ button:focus-visible {
 
 #logIn{  color: #000;}
 
+
+#contactUsPic{
+  align-content: flex-start;
+}
+
+.contactUsTitle{
+  margin-top: 100px;
+  margin-bottom: 7%;
+}
+
+
+footer{
+  margin-top: 20px;
+}
+
+
+
+.form-control{
+  border-color: black;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
