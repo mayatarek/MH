@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-            <div className="container-fluid">
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <div id="navContainer" className="container-fluid">
                 <Link className="navbar-brand" to="/home" id="logo">
-                    Mystic Glow
+                    <img src="/src/assets/logo.png" id="logo"></img>
                 </Link>
                 <button
                     className="navbar-toggler"
@@ -20,7 +20,7 @@ function Navbar() {
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNav">
-                    <ul className="navbar-nav me-auto">
+                    <ul id="mainNavMenu" className="navbar-nav me-auto">
                         <li className="nav-item">
                             <Link className="nav-link" to="/Homepage">
                                 Home
@@ -50,7 +50,12 @@ function Navbar() {
                             <Link className="nav-link" to="/contact">
                                 About Us
                             </Link>
-                        </li>
+                        </li>    
+                    </ul>
+                    <ul className="navbar-nav ms-auto">
+                            <Link id ="logIn" className="nav-link" to="/contact">
+                                Log In
+                            </Link>
                     </ul>
                 </div>
             </div>
