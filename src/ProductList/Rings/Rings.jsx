@@ -1,5 +1,5 @@
 import React from 'react';
-import ProductList from './ProductList';
+import ProductList from '../ProductList';
 
 const Rings = () => {
   return (
@@ -8,7 +8,7 @@ const Rings = () => {
 
       <h1>Rings</h1>
       <ProductList category="ring" /> 
-      
+
     </div>
   );
 };
