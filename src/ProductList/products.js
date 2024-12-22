@@ -110,6 +110,15 @@
             'details': 'A timeless diamond ring with a solitaire design.',
             'careTips': 'Handle with care and keep in a padded box.',
             'price': '7363 $'
+        },
+
+        {
+            'name': 'temp bracelet',
+            'type': 'bracelet',
+            'image': '../src/assets/ring4.jpeg',
+            'details': 'A timeless diamond ring with a solitaire design.',
+            'careTips': 'Handle with care and keep in a padded box.',
+            'price': '7363 $'
         }
     ];
 

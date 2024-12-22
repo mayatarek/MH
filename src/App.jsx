@@ -14,6 +14,9 @@ import Footer from './Common/Footer.jsx'
 import Homepage from './Homepage/Homepage.jsx'
 import ContactUs from './Contact Us/ContactUs.jsx'
 import Rings from './ProductList/Rings/Rings.jsx'
+import Earrings from './ProductList/Earrings/Earrings.jsx'
+import Necklaces from './ProductList/Necklaces/Necklaces.jsx'
+import Bracelet from './ProductList/Bracelets/Bracelets.jsx'
 
 
 function App() {
@@ -27,6 +30,11 @@ function App() {
         <Route path="/homepage" element={<Homepage/>}/>
         <Route path="/contactus" element={<ContactUs/>}/>
         <Route path="/rings" element={<Rings/>}/>
+        <Route path="/earrings" element={<Earrings/>}/>
+        <Route path="/necklaces" element={<Necklaces/>}/>
+        <Route path="/bracelets" element={<Bracelet/>}/>
+
+
       </Routes>
       <Footer/>
     </BrowserRouter>

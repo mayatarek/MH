@@ -6,6 +6,8 @@ function productList({category}){
 
 
     const filteredProduct = products.filter(product => product.type === category);
+
+    console.log(filteredProduct);
     return (
         <div className = "productList">
             {filteredProduct.map((product,index)=>
