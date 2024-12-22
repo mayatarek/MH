@@ -19,15 +19,15 @@ function ContactUs() {
                     <form>
                         <div className="form-group">
                             <label htmlFor="name">Enter Name:</label>
-                            <input className="form-control" id="name" type="text" />
+                            <input className="form-control contact" id="name" type="text" />
                         </div>
                         <div className="form-group">
                             <label htmlFor="email">Enter Email:</label>
-                            <input className="form-control" id="email" type="email" />
+                            <input className="form-control contact" id="email" type="email" />
                         </div>
                         <div className="form-group">
                             <label htmlFor="message">Enter Message:</label>
-                            <textarea className="form-control" id="message" rows="3"></textarea>
+                            <textarea className="form-control contact" id="message" rows="3"></textarea>
                         </div>
                         <button type="submit" >Submit</button>
                     </form>
