@@ -27,7 +27,7 @@ function Navbar() {
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/destinations">
+                            <Link className="nav-link" to="/rings">
                                 Rings
                             </Link>
                         </li>
