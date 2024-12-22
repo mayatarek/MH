@@ -13,6 +13,7 @@ import Navbar from './Common/navbar.jsx'
 import Footer from './Common/Footer.jsx'
 import Homepage from './Homepage/Homepage.jsx'
 import ContactUs from './Contact Us/ContactUs.jsx'
+import Rings from './ProductList/Rings/Rings.jsx'
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route path="/signup" element={<SignUp/>}/>
         <Route path="/homepage" element={<Homepage/>}/>
         <Route path="/contactus" element={<ContactUs/>}/>
+        <Route path="/rings" element={<Rings/>}/>
       </Routes>
       <Footer/>
     </BrowserRouter>

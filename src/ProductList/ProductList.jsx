@@ -1,11 +1,11 @@
 import React from "react";
-import ProductItem from "productItem";
-import products from "products";
+import ProductItem from "./Productitem";
+import products from "./products";
 
-const productList = () =>{
+function productList({category}){
 
 
-    const filteredProduct = product.filter(product => product.type === category);
+    const filteredProduct = products.filter(product => product.type === category);
     return (
         <div className = "productList">
             {filteredProduct.map((product,index)=>
