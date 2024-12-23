@@ -72,7 +72,6 @@ function ProductList({ category }) {
             product={product}
             liked={liked}
             user={user}
-            setWishlist={setWishlist}
           />
         );
       })}
