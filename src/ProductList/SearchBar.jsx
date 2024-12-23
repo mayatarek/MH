@@ -60,18 +60,19 @@
     //     container.innerHTML = `<p class="text-center">No destinations match your search criteria.</p>`;
     // }
 //}
-
+ 
 import React from 'react';
+
 
 const SearchBar = ({ searchQuery, setSearchQuery }) => {
   return (
-    <div>
+    <div className="searchbar">
       <input
         type="text"
         placeholder="Search by name..."
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
-        style={{ padding: '8px', width: '100%' }}
+        className="search-input"
       />
     </div>
   );

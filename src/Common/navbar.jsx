@@ -87,6 +87,9 @@ function Navbar({ user, setUser }) {
                     </ul>
                 </div>
             </div>
+
+            
+            
         </nav>
     );
 }

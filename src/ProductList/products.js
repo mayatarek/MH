@@ -1,5 +1,6 @@
   const products = [
         {
+            'id':'1',
             'name': 'Elegant Necklace',
             'type': 'necklace',
             'image': '../src/assets/necklace.jpeg',
@@ -8,6 +9,7 @@
             'price': '7363 $'
         },
         {
+            'id':'2',
             'name': 'Golden Necklace',
             'type': 'necklace',
             'image': '../src/assets/necklace2.jpeg',
@@ -16,6 +18,7 @@
             'price': '7363 $'
         },
         {
+            'id':'3',
             'name': 'Pearl Necklace',
             'type': 'necklace',
             'image': '../src/assets/necklace3.jpeg',
@@ -24,6 +27,7 @@
             'price': '7363 $'
         },
         {
+            'id':'4',
             'name': 'Silver Charm Necklace',
             'type': 'necklace',
             'image': '../src/assets/necklace4.jpeg',
@@ -32,6 +36,7 @@
             'price': '7363 $'
         },
         {
+            'id':'5',
             'name': 'Vintage Gold Necklace',
             'type': 'necklace',
             'image': '../src/assets/necklace5.jpeg',
@@ -40,6 +45,7 @@
             'price': '7363 $'
         },
         {
+            'id':'6',
             'name': 'Crystal Pendant Necklace',
             'type': 'necklace',
             'image': '../src/assets/necklace6.jpeg',
@@ -48,6 +54,7 @@
             'price': '7363 $'
         },
         {
+            'id':'7',
             'name': 'Classic Earring',
             'type': 'earring',
             'image': '../src/assets/earring.jpeg',
@@ -56,6 +63,7 @@
             'price': '7363 $'
         },
         {
+            'id':'8',
             'name': 'Diamond Stud Earrings',
             'type': 'earring',
             'image': '../src/assets/earring2.jpeg',
@@ -64,6 +72,7 @@
             'price': '7363 $'
         },
         {
+            'id':'9',
             'name': 'Hoop Earrings',
             'type': 'earring',
             'image': '../src/assets/earring3.jpeg',
@@ -72,6 +81,7 @@
             'price': '7363 $'
         },
         {
+            'id':'10',
             'name': 'Rose Gold Earrings',
             'type': 'earring',
             'image': '../src/assets/earring4.jpeg',
@@ -80,6 +90,7 @@
             'price': '7363 $'
         },
         {
+            'id':'11',
             'name': 'Silver Ring',
             'type': 'ring',
             'image': '../src/assets/ring.jpeg',
@@ -88,6 +99,7 @@
             'price': '7363 $'
         },
         {
+            'id':'12',
             'name': 'Gold Band Ring',
             'type': 'ring',
             'image': '../src/assets/ring2.jpeg',
@@ -96,6 +108,7 @@
             'price': '7363 $'
         },
         {
+            'id':'13',
             'name': 'Ruby Gem Ring',
             'type': 'ring',
             'image': '../src/assets/ring3.jpeg',
@@ -104,6 +117,7 @@
             'price': '7363 $'
         },
         {
+            'id':'14',
             'name': 'Diamond Ring',
             'type': 'ring',
             'image': '../src/assets/ring4.jpeg',
@@ -113,6 +127,7 @@
         },
 
         {
+            'id':'15',
             'name': 'temp bracelet',
             'type': 'bracelet',
             'image': '../src/assets/ring4.jpeg',
