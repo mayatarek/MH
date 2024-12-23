@@ -9,10 +9,6 @@ function Navbar({ user, setUser }) {
         //         setUser(loggedInUser); } 
         // }, []);
 
-        // const handleLogout = () => {
-        //     localStorage.removeItem("loggedInUser");
-        //     setUser(null);
-        // };
         const handleLogout = () => {
               localStorage.removeItem("loggedInUser");
               setUser(null); 
