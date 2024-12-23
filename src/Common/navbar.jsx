@@ -52,10 +52,17 @@ function Navbar() {
                             </Link>
                         </li>    
                     </ul>
-                    <ul className="navbar-nav ms-auto">
-                            <Link id ="logInNav" className="nav-link" to="/login">
-                                Log In
-                            </Link>
+                    <ul className="navbar-nav ms-auto ">
+                    <li className="nav-item" id="wishItem">
+                                <Link className="nav-link" to="/wishlist">
+                                <img src="/src/assets/liked.jpg" id="wishlist"></img>
+                                </Link>
+                        </li>
+                        <li className="nav-item">
+                                <Link id ="logInNav" className="nav-link" to="/login">
+                                    <button id="logInButton">Log In</button>
+                                </Link>
+                        </li>                  
                     </ul>
                 </div>
             </div>
