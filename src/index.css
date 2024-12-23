@@ -159,3 +159,18 @@ footer{
   align-items: center;
   justify-content: center;
 }
+
+.searchbar {
+  margin-top:10px;
+  display: flex;
+  justify-content: center;
+  color: #ccc;
+
+}
+
+.seach-input {
+  border-radius: 55px;
+  border: 2px solid #ccc;
+  background-color: #ccc;
+  color: #000000;
+}

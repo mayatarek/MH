@@ -51,13 +51,19 @@ function ProductList({ category }) {
         <option value="price">Sort by Price</option>
       </select>
 
-     
+      {sortBy === 'name'? (
       <select onChange={(e) => setSortOrder(e.target.value)} value={sortOrder}>
+        <option value="asc">A to Z</option>
+        <option value="desc">Z to A</option>
+      </select>
+
+      ):(
+        <select onChange={(e) => setSortOrder(e.target.value)} value={sortOrder}>
         <option value="asc">Low to High</option>
         <option value="desc">High to Low</option>
       </select>
-
-      
+      )
+    }
       {sortedProducts.map((product, index) => (
         <ProductItem key={index} product={product} />
       ))}
