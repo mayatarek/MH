@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import Productitem from "/src/ProductList/Productitem.jsx";
+import WishlistItem from "./WishListItem";
 
 function Wishlist() {
   const [listItems, setListItems] = useState([]);
@@ -52,12 +53,12 @@ function Wishlist() {
   }, [user]);
 
 
-  const addToWishlist = (product) => {
-    let listItems = JSON.parse(localStorage.getItem(`wishlist_user${user.id}`)) || [];
-    listItems.push(product);
-    localStorage.setItem(`wishlist_user${user.id}`, JSON.stringify(listItems));
-    setListItems(listItems);
-  };
+  // const addToWishlist = (product) => {
+  //   let listItems = JSON.parse(localStorage.getItem(`wishlist_user${user.id}`)) || [];
+  //   listItems.push(product);
+  //   localStorage.setItem(`wishlist_user${user.id}`, JSON.stringify(listItems));
+  //   setListItems(listItems);
+  // };
 
   function removeFromWishlist(index){
     const listItems = JSON.parse(localStorage.getItem(`wishlist_user${user.id}`)) || [];
@@ -85,15 +86,20 @@ function Wishlist() {
           <>
           <h3>My Wishlist</h3>
           
-          <ul> 
+          {/* <ul>  */}
               {listItems.map((product, index) => ( 
-                  <li key={index}> 
-                      <div> 
-                          <Productitem product={product}/>
-                          <button onClick={() => removeFromWishlist(index)}>Remove</button>
+                  // <li key={index}> 
+                      <div key={index}> 
+                          <WishlistItem product={product}/>
+                          <button onClick={() => removeFromWishlist(index)}
+                          style={{ all: 'unset', color: 'red', cursor: 'pointer', fontSize: 30 }}
+                          >
+                          ♥
+                          </button>
+                          {/* <button onClick={() => removeFromWishlist(index)}>Remove</button> */}
                       </div> 
-                  </li> ))} 
-          </ul>           
+                  /* </li> */ ))} 
+          {/* </ul> */}
           </>
       
        )}
