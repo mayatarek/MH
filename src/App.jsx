@@ -36,7 +36,7 @@ function App() {
         <Route path="/bracelets" element={<Bracelet/>}/>
         <Route path="/wishlist" element={<Wishlist/>}/>
         <Route path="/wishlist/:userID" element={<Wishlist />} />
-        <Route path="*" element={<NotFound />} />
+        {/* <Route path="*" element={<NotFound />} /> */}
 
 
 
