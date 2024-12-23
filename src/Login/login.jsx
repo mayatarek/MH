@@ -28,7 +28,8 @@ function Login() {
 
       if (user) {
         alert(`Welcome back, ${user.name}!`);
-        navigate("/homepage"); // Redirect to homepage
+        localStorage.setItem("loggedInUser", JSON.stringify(user)); 
+        navigate(`/homepage`);
       } else {
         setLoginError(true); // Show error if login fails
       }

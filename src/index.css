@@ -95,6 +95,10 @@ button:focus-visible {
 }
 
 
+#wishlist{
+  width:30px;
+}
+
 .bestSelling{
   margin-top: 4%;
 }
@@ -142,18 +146,16 @@ footer{
   margin-top: 10px;
 }
 
-.searchbar{
-  margin-top: 10px;
-  display: flex;
-  justify-content: center;
 
-}
-
-.search-input {
-  border-radius: 55px; 
-  border: 2px solid #ccc;
-  background-color: white; 
+#logInButton{
+  background-color: white;
+  border-color: black;
   color:#000;
 }
 
 
+#wishItem{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
