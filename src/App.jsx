@@ -36,9 +36,9 @@ function App() {
         <Route path="/necklaces" element={<Necklaces/>}/>
         <Route path="/bracelets" element={<Bracelet/>}/>
         <Route path="/wishlist" element={<Wishlist/>}/>
-        <Route element = {<ProtectedRoutes/>}>
+        {/* <Route element = {<ProtectedRoutes/>}>
           <Route path="/wishlist/:userID" element={<Wishlist />} />
-        </Route>
+        </Route> */}
         {/* <Route path="*" element={<NotFound />} /> */}
 
 
