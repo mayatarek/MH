@@ -15,24 +15,24 @@ function Wishlist() {
   const fetchList = async () => {
     try {
 
-      localStorage.setItem("wishlist_user1", JSON.stringify([
-        {
-            "name": "Elegant Necklace",
-            "type": "necklace",
-            "image": "../src/assets/necklace.jpeg",
-            "details": "A stunning piece that complements any outfit.",
-            "careTips": "Keep away from water and perfume to maintain shine.",
-            "price": "7363 $"
-        },
-        {
-            "name": "Golden Necklace",
-            "type": "necklace",
-            "image": "../src/assets/necklace2.jpeg",
-            "details": "A perfect addition for formal occasions.",
-            "careTips": "Wipe with a soft cloth after use.",
-            "price": "7363 $"
-        }
-    ]));
+      // localStorage.setItem("wishlist_user1", JSON.stringify([
+      //   {
+      //       "name": "Elegant Necklace",
+      //       "type": "necklace",
+      //       "image": "../src/assets/necklace.jpeg",
+      //       "details": "A stunning piece that complements any outfit.",
+      //       "careTips": "Keep away from water and perfume to maintain shine.",
+      //       "price": "7363 $"
+      //   },
+      //   {
+      //       "name": "Golden Necklace",
+      //       "type": "necklace",
+      //       "image": "../src/assets/necklace2.jpeg",
+      //       "details": "A perfect addition for formal occasions.",
+      //       "careTips": "Wipe with a soft cloth after use.",
+      //       "price": "7363 $"
+      //   }
+      //]));
     
       const listItems = JSON.parse(localStorage.getItem(`wishlist_user${user.id}`)) || [];
       setListItems(listItems);
@@ -62,6 +62,8 @@ function Wishlist() {
   function removeFromWishlist(index){
     const listItems = JSON.parse(localStorage.getItem(`wishlist_user${user.id}`)) || [];
     listItems.splice(index, 1);
+    localStorage.setItem(`wishlist_user_${user.id}`, JSON.stringify(listItems)); 
+    setListItems(listItems);
   };
 
   return (

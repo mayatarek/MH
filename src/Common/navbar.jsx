@@ -1,7 +1,23 @@
-import React from "react";
+import { useState, useEffect } from 'react'
 import { Link } from "react-router-dom";
 
-function Navbar() {
+function Navbar({ user, setUser }) {
+        // const [user, setUser] = useState(null); 
+        // useEffect(() => { 
+        //     const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser")); 
+        //     if (loggedInUser) { 
+        //         setUser(loggedInUser); } 
+        // }, []);
+
+        // const handleLogout = () => {
+        //     localStorage.removeItem("loggedInUser");
+        //     setUser(null);
+        // };
+        const handleLogout = () => {
+              localStorage.removeItem("loggedInUser");
+              setUser(null); 
+        };
+
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
             <div id="navContainer" className="container-fluid">
@@ -51,23 +67,23 @@ function Navbar() {
                                 Contact Us
                             </Link>
                         </li>   
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/wishlist">
-                                Wishlist
-                            </Link>
-                        </li> 
                     </ul>
                     <ul className="navbar-nav ms-auto ">
-                    <li className="nav-item" id="wishItem">
+                        <li className="nav-item" id="wishItem">
                                 <Link className="nav-link" to="/wishlist">
                                 <img src="/src/assets/liked.jpg" id="wishlist"></img>
                                 </Link>
                         </li>
-                        <li className="nav-item">
-                                <Link id ="logInNav" className="nav-link" to="/login">
-                                    <button id="logInButton">Log In</button>
-                                </Link>
-                        </li>                  
+                        {user ? ( 
+                            <li className="nav-item"> 
+                                <Link id="logInNav" className="nav-link" to="/login"> 
+                                <button id="logInButton" onClick={handleLogout} to="/homepage" >Log Out</button> 
+                                
+                                </Link> 
+                            </li> ) : ( <li className="nav-item"> <Link id="logInNav" className="nav-link" to="/login"> 
+                            <button id="logInButton">Log In</button> </Link> </li> 
+                            )
+                        } 
                     </ul>
                 </div>
             </div>

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate, Link } from "react-router-dom";
 
-function Login() {
+function Login({ setUser }) {
   const {
     register,
     handleSubmit,
@@ -29,6 +29,7 @@ function Login() {
       if (user) {
         alert(`Welcome back, ${user.name}!`);
         localStorage.setItem("loggedInUser", JSON.stringify(user)); 
+        setUser(user); 
         navigate(`/homepage`);
       } else {
         setLoginError(true); // Show error if login fails

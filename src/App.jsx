@@ -23,11 +23,12 @@ import ProtectedRoutes from  "./ProtectedRoutes.jsx"
 
 function App() {
 
+  const [user, setUser] = useState(null);
   return (
     <BrowserRouter>
-      {/*useLocation() !=="/login" || useLocation()!=="/signup" && */<Navbar/>}
+      {/*useLocation() !=="/login" || useLocation()!=="/signup" && */<Navbar user={user} setUser={setUser} />}
       <Routes>
-        <Route path="/login" element={<Login/>}/>
+      <Route path="/login" element={<Login setUser={setUser} />} />
         <Route path="/signup" element={<SignUp/>}/>
         <Route path="/homepage" element={<Homepage/>}/>
         <Route path="/contactus" element={<ContactUs/>}/>
