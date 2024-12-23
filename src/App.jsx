@@ -20,10 +20,12 @@ import Bracelet from './ProductList/Bracelets/Bracelets.jsx'
 
 
 function App() {
+ 
 
   return (
     <BrowserRouter>
       <Navbar/>
+      
       <Routes>
         <Route path="/login" element={<Login/>}/>
         <Route path="/signup" element={<SignUp/>}/>
@@ -33,6 +35,7 @@ function App() {
         <Route path="/earrings" element={<Earrings/>}/>
         <Route path="/necklaces" element={<Necklaces/>}/>
         <Route path="/bracelets" element={<Bracelet/>}/>
+       
 
 
       </Routes>

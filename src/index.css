@@ -141,3 +141,19 @@ footer{
   margin-bottom: 10px;
   margin-top: 10px;
 }
+
+.searchbar{
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+
+}
+
+.search-input {
+  border-radius: 55px; 
+  border: 2px solid #ccc;
+  background-color: white; 
+  color:#000;
+}
+
+
