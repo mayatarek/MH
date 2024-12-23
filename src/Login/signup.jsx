@@ -1,50 +1,109 @@
-import {useForm} from 'react-hook-form'
-import { useNavigate, Link } from 'react-router-dom';
+import { useForm } from "react-hook-form";
+import { useNavigate, Link } from "react-router-dom";
 
-function SignUp(){
-    const {register, handleSubmit} = useForm();
-    const Navigate = useNavigate();
+function SignUp() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const navigate = useNavigate();
 
-    //add user after signup
+  const handleSignUp = (data) => {
+    const users = JSON.parse(localStorage.getItem("users")) || [];
 
-    return(
-        <div class="card">
-        <h3>SignUp</h3>
-        <form>
-            <div style={{textAlign: 'left'}}>
-            <label>Email</label><br/>
-            <input type="email" placeholder="johndoe@example.com" id="email" {...register("email",{
-            pattern:{
-                value:/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-                message: 'Invalid email'
-            }})}/><br/>
-            <label>Name</label><br/>
-            <input type="text" placeholder="John Doe" id="name"/><br/>
-            <label>Age</label><br/>
-            <input type="text" placeholder="23" id="age"/><br/>
-            <label>Phone number</label><br/>
-            <input type="text" placeholder="01XXXXXXXXX" id="number"/><br/>
-            <label for="gender">Gender</label><br/>
-            <select id="gender" name="gender">
-            <option value="female" selected>Female</option>
-            <option value="male">Male</option>
-            </select><br/>
+    const newUser = {
+      id: users.length + 11,
+      name: data.name,
+      email: data.email,
+      phone: data.phone,
+      password: data.password,
+    };
 
-            <lable>Password</lable><br/>
-            <input type="password" placeholder="" id="password"/>
-            <br/>
-            </div>
-            <button style={{marginTop:12}}>submit</button>
+    // Add the new user to the local storage
+    users.push(newUser);
+    localStorage.setItem("users", JSON.stringify(users));
 
-        </form>
+    alert("Sign up successful! Redirecting to homepage...");
+    navigate("/homepage"); // Redirect to homepage
+  };
 
-        <hr/>
-        
-        <Link to="/login" >Registered user? Log in!</Link>
-        <Link to="/homepage" style={{color: 'grey'}}>or continue as guest</Link>
-        
+  return (
+    <div className="card">
+      <h3>Sign Up</h3>
+      <form onSubmit={handleSubmit(handleSignUp)}>
+        <div style={{ textAlign: "left" }}>
+          <label>Name</label>
+          <br />
+          <input
+            type="text"
+            placeholder="John Doe"
+            id="name"
+            {...register("name", { required: "Name is required" })}
+          />
+          {errors.name && <p style={{ color: "red" }}>{errors.name.message}</p>}
+          <br />
+
+          <label>Email</label>
+          <br />
+          <input
+            type="email"
+            placeholder="johndoe@example.com"
+            id="email"
+            {...register("email", {
+              required: "Email is required",
+              pattern: {
+                value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                message: "Invalid email format",
+              },
+            })}
+          />
+          {errors.email && <p style={{ color: "red" }}>{errors.email.message}</p>}
+          <br />
+
+          <label>Phone number</label>
+          <br />
+          <input
+            type="text"
+            placeholder="01XXXXXXXXX"
+            id="number"
+            {...register("phone", {
+              required: "Phone number is required",
+              pattern: {
+                value: /^01[0-9]{9}$/,
+                message: "Invalid phone number format",
+              },
+            })}
+          />
+          {errors.phone && <p style={{ color: "red" }}>{errors.phone.message}</p>}
+          <br />
+
+          <label>Password</label>
+          <br />
+          <input
+            type="password"
+            placeholder="Enter your password"
+            id="password"
+            {...register("password", { required: "Password is required" })}
+          />
+          {errors.password && (
+            <p style={{ color: "red" }}>{errors.password.message}</p>
+          )}
+          <br />
+        </div>
+        <button type="submit" style={{ marginTop: 12 }}>
+          Submit
+        </button>
+      </form>
+
+      <hr />
+
+      <Link to="/login">Registered user? Log in!</Link>
+      <Link to="/homepage" style={{ color: "grey" }}>
+        or continue as guest
+      </Link>
     </div>
-    )
+  );
 }
 
-export default SignUp
+export default SignUp;
