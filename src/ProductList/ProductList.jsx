@@ -46,19 +46,20 @@ function ProductList({ category }) {
       </ShowSearchBar>
 
       
-      <select onChange={(e) => setSortBy(e.target.value)} value={sortBy}>
+      <select onChange={(e) => setSortBy(e.target.value)} value={sortBy} className="sort-name">
+
         <option value="name">Sort by Name</option>
         <option value="price">Sort by Price</option>
       </select>
 
       {sortBy === 'name'? (
-      <select onChange={(e) => setSortOrder(e.target.value)} value={sortOrder}>
+      <select onChange={(e) => setSortOrder(e.target.value)} value={sortOrder} className='sort-name'>
         <option value="asc">A to Z</option>
         <option value="desc">Z to A</option>
       </select>
 
       ):(
-        <select onChange={(e) => setSortOrder(e.target.value)} value={sortOrder}>
+        <select onChange={(e) => setSortOrder(e.target.value)} value={sortOrder} className='sort-price'>
         <option value="asc">Low to High</option>
         <option value="desc">High to Low</option>
       </select>
