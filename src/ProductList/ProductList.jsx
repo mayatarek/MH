@@ -11,7 +11,7 @@ function ProductList({ category }) {
   const [wishlist, setWishlist] = useState([]);
   const [user, setUser] = useState(null);
 
-  // Fetch the logged-in user
+  
   useEffect(() => {
     const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
     if (loggedInUser) {
@@ -19,7 +19,7 @@ function ProductList({ category }) {
     }
   }, []);
 
-  // Fetch the wishlist for the user
+ 
   useEffect(() => {
     if (user) {
       const userWishlist = JSON.parse(localStorage.getItem(`wishlist_user${user.id}`)) || [];
@@ -27,14 +27,14 @@ function ProductList({ category }) {
     }
   }, [user]);
 
-  // Filter products based on category and search query
+  
   const filteredProducts = products
     .filter((product) => product.type === category)
     .filter((product) =>
       product.name.toLowerCase().includes(searchQuery.toLowerCase())
     );
 
-  // Sort products
+ 
   const sortedProducts = filteredProducts.sort((a, b) => {
     if (sortBy === 'name') {
       return sortOrder === 'asc'
@@ -53,17 +53,27 @@ function ProductList({ category }) {
       <ShowSearchBar>
         <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       </ShowSearchBar>
-
-      <select onChange={(e) => setSortBy(e.target.value)} value={sortBy}>
+  
+    
+      <select onChange={(e) => setSortBy(e.target.value)} value={sortBy} className="sort-name">
         <option value="name">Sort by Name</option>
         <option value="price">Sort by Price</option>
       </select>
-
-      <select onChange={(e) => setSortOrder(e.target.value)} value={sortOrder}>
-        <option value="asc">{sortBy === 'name' ? 'A to Z' : 'Low to High'}</option>
-        <option value="desc">{sortBy === 'name' ? 'Z to A' : 'High to Low'}</option>
-      </select>
-
+  
+     
+      {sortBy === 'name' ? (
+        <select onChange={(e) => setSortOrder(e.target.value)} value={sortOrder} className="sort-name">
+          <option value="asc">A to Z</option>
+          <option value="desc">Z to A</option>
+        </select>
+      ) : (
+        <select onChange={(e) => setSortOrder(e.target.value)} value={sortOrder} className="sort-price">
+          <option value="asc">Low to High</option>
+          <option value="desc">High to Low</option>
+        </select>
+      )}
+  
+     
       {sortedProducts.map((product) => {
         const liked = wishlist.some((item) => item.id === product.id);
         return (
@@ -76,7 +86,6 @@ function ProductList({ category }) {
         );
       })}
     </div>
-  );
-}
-
+)};
+  
 export default ProductList;
