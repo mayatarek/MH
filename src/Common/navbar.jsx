@@ -5,7 +5,7 @@ function Navbar() {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
             <div id="navContainer" className="container-fluid">
-                <Link className="navbar-brand" to="/home" id="logo">
+                <Link className="navbar-brand" to="/Homepage" id="logo">
                     <img src="/src/assets/logo.png" id="logo"></img>
                 </Link>
                 <button
@@ -50,7 +50,12 @@ function Navbar() {
                             <Link className="nav-link" to="/contactus">
                                 Contact Us
                             </Link>
-                        </li>    
+                        </li>   
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/wishlist">
+                                Wishlist
+                            </Link>
+                        </li> 
                     </ul>
                     <ul className="navbar-nav ms-auto ">
                     <li className="nav-item" id="wishItem">

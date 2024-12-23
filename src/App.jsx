@@ -3,7 +3,7 @@ import './App.css'
 
 
 //open terminal and run: npm install react-router-dom
-import { BrowserRouter, Routes, Route} from 'react-router-dom'
+import { BrowserRouter, Routes, Route, useLocation} from 'react-router-dom'
 
 
 //open terminal and run: npm install react-hook-form
@@ -24,7 +24,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Navbar/>
+      {/*useLocation() !=="/login" || useLocation()!=="/signup" && */<Navbar/>}
       <Routes>
         <Route path="/login" element={<Login/>}/>
         <Route path="/signup" element={<SignUp/>}/>
