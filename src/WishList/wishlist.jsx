@@ -3,35 +3,42 @@ import { useParams, Link } from "react-router-dom";
 import Productitem from "/src/ProductList/Productitem.jsx";
 
 function Wishlist() {
-  const { userID } = useParams();
   const [listItems, setListItems] = useState([]);
+  const [user, setUser] = useState(null); 
+
+  useEffect(() => { 
+      const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser")); 
+      if (loggedInUser) { 
+          setUser(loggedInUser); } 
+  }, []);
+
   const fetchList = async () => {
     try {
 
-    //   localStorage.setItem("wishlist_user122", JSON.stringify([
-    //     {
-    //         "name": "Elegant Necklace",
-    //         "type": "necklace",
-    //         "image": "../src/assets/necklace.jpeg",
-    //         "details": "A stunning piece that complements any outfit.",
-    //         "careTips": "Keep away from water and perfume to maintain shine.",
-    //         "price": "7363 $"
-    //     },
-    //     {
-    //         "name": "Golden Necklace",
-    //         "type": "necklace",
-    //         "image": "../src/assets/necklace2.jpeg",
-    //         "details": "A perfect addition for formal occasions.",
-    //         "careTips": "Wipe with a soft cloth after use.",
-    //         "price": "7363 $"
-    //     }
-    // ]));
+      localStorage.setItem("wishlist_user1", JSON.stringify([
+        {
+            "name": "Elegant Necklace",
+            "type": "necklace",
+            "image": "../src/assets/necklace.jpeg",
+            "details": "A stunning piece that complements any outfit.",
+            "careTips": "Keep away from water and perfume to maintain shine.",
+            "price": "7363 $"
+        },
+        {
+            "name": "Golden Necklace",
+            "type": "necklace",
+            "image": "../src/assets/necklace2.jpeg",
+            "details": "A perfect addition for formal occasions.",
+            "careTips": "Wipe with a soft cloth after use.",
+            "price": "7363 $"
+        }
+    ]));
     
-      const listItems = JSON.parse(localStorage.getItem(`wishlist_${userID}`)) || [];
+      const listItems = JSON.parse(localStorage.getItem(`wishlist_user${user.id}`)) || [];
       setListItems(listItems);
       console.log("fetch successful");
       console.log(listItems);
-      console.log(userID);
+      console.log(user.id);
 
     } catch (error) {
       console.error("Error fetching wishlist items:", error);
@@ -39,27 +46,27 @@ function Wishlist() {
   };
 
   useEffect(() => {
-    if (userID) {
+    if (user) {
       fetchList();
     }
-  }, [userID]);
+  }, [user]);
 
 
   const addToWishlist = (product) => {
-    let listItems = JSON.parse(localStorage.getItem(`wishlist_${userID}`)) || [];
+    let listItems = JSON.parse(localStorage.getItem(`wishlist_user${user.id}`)) || [];
     listItems.push(product);
-    localStorage.setItem(`wishlist_${userID}`, JSON.stringify(listItems));
+    localStorage.setItem(`wishlist_user${user.id}`, JSON.stringify(listItems));
     setListItems(listItems);
   };
 
   function removeFromWishlist(index){
-    const listItems = JSON.parse(localStorage.getItem(`wishlist_${userID}`)) || [];
+    const listItems = JSON.parse(localStorage.getItem(`wishlist_user${user.id}`)) || [];
     listItems.splice(index, 1);
   };
 
   return (
     <div>
-      {!userID && (
+      {!user && (
         <div>
           <h2>Looks like you are not logged in</h2>
           <br />
@@ -72,7 +79,7 @@ function Wishlist() {
           <Link to="/homepage">Continue as guest</Link>
         </div>
       )}
-      {userID && listItems.length > 0 && (     
+      {user && listItems.length > 0 && (     
           <>
           <h3>My Wishlist</h3>
           
@@ -88,7 +95,7 @@ function Wishlist() {
           </>
       
        )}
-      {userID && listItems.length === 0 && (
+      {user && listItems.length === 0 && (
         <div>
           <h3>
             You have not added anything to your wishlist yet :/ Browse our
