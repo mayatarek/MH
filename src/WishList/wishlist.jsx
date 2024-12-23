@@ -32,7 +32,7 @@ function Wishlist() {
       //       "careTips": "Wipe with a soft cloth after use.",
       //       "price": "7363 $"
       //   }
-      //]));
+      // ]));
     
       const listItems = JSON.parse(localStorage.getItem(`wishlist_user${user.id}`)) || [];
       setListItems(listItems);
@@ -62,7 +62,7 @@ function Wishlist() {
   function removeFromWishlist(index){
     const listItems = JSON.parse(localStorage.getItem(`wishlist_user${user.id}`)) || [];
     listItems.splice(index, 1);
-    localStorage.setItem(`wishlist_user_${user.id}`, JSON.stringify(listItems)); 
+    localStorage.setItem(`wishlist_user${user.id}`, JSON.stringify(listItems)); 
     setListItems(listItems);
   };
 
