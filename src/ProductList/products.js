@@ -134,7 +134,16 @@
             'details': 'A timeless diamond ring with a solitaire design.',
             'careTips': 'Handle with care and keep in a padded box.',
             'price': '7363 $'
-        }
+        },
+        {
+            'id':'16',
+            'name': 'Cute Ring',
+            'type': 'ring',
+            'image': '../src/assets/ring5.jpeg',
+            'details': 'A timeless diamond ring with a solitaire design.',
+            'careTips': 'Handle with care and keep in a padded box.',
+            'price': '7363 $'
+        },
     ];
 
 export default products;   
