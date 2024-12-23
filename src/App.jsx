@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 
 
@@ -25,6 +25,14 @@ function App() {
  
 
   const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+    if (loggedInUser) {
+      setUser(loggedInUser);
+    }
+  }, []);
+
   return (
     <BrowserRouter>
       {/*useLocation() !=="/login" || useLocation()!=="/signup" && */<Navbar user={user} setUser={setUser} />}
