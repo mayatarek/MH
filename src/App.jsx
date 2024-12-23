@@ -18,6 +18,7 @@ import Earrings from './ProductList/Earrings/Earrings.jsx'
 import Necklaces from './ProductList/Necklaces/Necklaces.jsx'
 import Bracelet from './ProductList/Bracelets/Bracelets.jsx'
 import Wishlist from './WishList/wishlist.jsx'
+import ProtectedRoutes from  "./ProtectedRoutes.jsx"
 
 
 function App() {
@@ -35,7 +36,9 @@ function App() {
         <Route path="/necklaces" element={<Necklaces/>}/>
         <Route path="/bracelets" element={<Bracelet/>}/>
         <Route path="/wishlist" element={<Wishlist/>}/>
-        <Route path="/wishlist/:userID" element={<Wishlist />} />
+        <Route element = {<ProtectedRoutes/>}>
+          <Route path="/wishlist/:userID" element={<Wishlist />} />
+        </Route>
         {/* <Route path="*" element={<NotFound />} /> */}
 
 
