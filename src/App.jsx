@@ -3,7 +3,7 @@ import './App.css'
 
 
 //open terminal and run: npm install react-router-dom
-import { BrowserRouter, Routes, Route} from 'react-router-dom'
+import { BrowserRouter, Routes, Route, useLocation} from 'react-router-dom'
 
 
 //open terminal and run: npm install react-hook-form
@@ -17,13 +17,14 @@ import Rings from './ProductList/Rings/Rings.jsx'
 import Earrings from './ProductList/Earrings/Earrings.jsx'
 import Necklaces from './ProductList/Necklaces/Necklaces.jsx'
 import Bracelet from './ProductList/Bracelets/Bracelets.jsx'
+import Wishlist from './WishList/wishlist.jsx'
 
 
 function App() {
 
   return (
     <BrowserRouter>
-      <Navbar/>
+      {/*useLocation() !=="/login" || useLocation()!=="/signup" && */<Navbar/>}
       <Routes>
         <Route path="/login" element={<Login/>}/>
         <Route path="/signup" element={<SignUp/>}/>
@@ -33,6 +34,7 @@ function App() {
         <Route path="/earrings" element={<Earrings/>}/>
         <Route path="/necklaces" element={<Necklaces/>}/>
         <Route path="/bracelets" element={<Bracelet/>}/>
+        <Route path="/wishlist" element={<Wishlist/>}/>
 
 
       </Routes>
