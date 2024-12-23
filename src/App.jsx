@@ -7,7 +7,7 @@ import { BrowserRouter, Routes, Route, useLocation} from 'react-router-dom'
 
 
 //open terminal and run: npm install react-hook-form
-import Login from './Login/Login.jsx'
+import Login from './Login/login.jsx'
 import SignUp from './Login/SignUp.jsx'
 import Navbar from './Common/navbar.jsx'
 import Footer from './Common/Footer.jsx'
@@ -35,6 +35,9 @@ function App() {
         <Route path="/necklaces" element={<Necklaces/>}/>
         <Route path="/bracelets" element={<Bracelet/>}/>
         <Route path="/wishlist" element={<Wishlist/>}/>
+        <Route path="/wishlist/:userID" element={<Wishlist />} />
+        <Route path="*" element={<NotFound />} />
+
 
 
       </Routes>
