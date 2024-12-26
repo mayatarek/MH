@@ -1,0 +1,42 @@
+.product-details-container {
+    max-width: 800px;
+    margin-top: 30%;
+    margin-bottom: 30%;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-details-container h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .product-details-container img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .product-details-container p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  .product-details-container .price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #b12704;
+    margin-top: 20px;
+  }
+  
+  .product-details-container .care-tips {
+    font-style: italic;
+    color: #666;
+  }
+  
