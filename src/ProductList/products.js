@@ -6,7 +6,8 @@ const products = [
         'image': '../src/assets/necklace.jpeg',
         'details': 'A stunning piece that complements any outfit.',
         'careTips': 'Keep away from water and perfume to maintain shine.',
-        'price': '120 £'
+        'price': '120 £',
+        
     },
     {
         'id':'2',
@@ -94,6 +95,7 @@ const products = [
         'name': 'Silver Ring',
         'type': 'ring',
         'image': '../src/assets/ring.jpeg',
+        'hoverImage': '../src/assets/ring2.jpeg',
         'details': 'A sleek silver ring for a modern look.',
         'careTips': 'Avoid prolonged exposure to moisture.',
         'price': '85 £'
@@ -103,6 +105,7 @@ const products = [
         'name': 'Gold Band Ring',
         'type': 'ring',
         'image': '../src/assets/ring2.jpeg',
+        'hoverImage': '../src/assets/ring.jpeg',
         'details': 'A classic gold band ring for everyday wear.',
         'careTips': 'Polish regularly with a soft cloth.',
         'price': '100 £'
@@ -112,6 +115,7 @@ const products = [
         'name': 'Ruby Gem Ring',
         'type': 'ring',
         'image': '../src/assets/ring3.jpeg',
+        'hoverImage': '../src/assets/ring.jpeg',
         'details': 'An elegant ring with a vibrant ruby centerpiece.',
         'careTips': 'Store separately to protect the gemstone.',
         'price': '400 £'
@@ -121,6 +125,7 @@ const products = [
         'name': 'Diamond Ring',
         'type': 'ring',
         'image': '../src/assets/ring4.jpeg',
+        'hoverImage': '../src/assets/ring.jpeg',
         'details': 'A timeless diamond ring with a solitaire design.',
         'careTips': 'Handle with care and keep in a padded box.',
         'price': '800 £'

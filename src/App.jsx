@@ -1,5 +1,8 @@
 import { useState, useEffect } from 'react'
 import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+// import './tailwind.css';
 
 
 //open terminal and run: npm install react-router-dom
@@ -19,8 +22,7 @@ import Necklaces from './ProductList/Necklaces/Necklaces.jsx'
 import Bracelet from './ProductList/Bracelets/Bracelets.jsx'
 import Wishlist from './WishList/wishlist.jsx'
 import ProtectedRoutes from  "./ProtectedRoutes.jsx"
-
-
+import ProductDetails from './ProductList/productDetails.jsx';
 function App() {
  
 
@@ -39,6 +41,7 @@ function App() {
       <Routes>
       <Route path="/login" element={<Login setUser={setUser} />} />
         <Route path="/signup" element={<SignUp/>}/>
+        <Route path="/" element={<Homepage/>}/>
         <Route path="/homepage" element={<Homepage/>}/>
         <Route path="/contactus" element={<ContactUs/>}/>
         <Route path="/rings" element={<Rings/>}/>
@@ -46,6 +49,9 @@ function App() {
         <Route path="/necklaces" element={<Necklaces/>}/>
         <Route path="/bracelets" element={<Bracelet/>}/>
         <Route path="/wishlist" element={<Wishlist/>}/>
+
+        <Route path="/product/:id" element={<ProductDetails />} />
+
         {/* <Route element = {<ProtectedRoutes/>}>
           <Route path="/wishlist/:userID" element={<Wishlist />} />
         </Route> */}

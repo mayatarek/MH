@@ -27,12 +27,13 @@ body {
   display: flex;
   place-items: center;
   min-width: 320px;
-  min-height: 100vh;
 }
 
 h1 {
   font-size: 3.2em;
-  line-height: 1.1;
+  line-height: 1.5;
+  margin-top: 50px; 
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 button {
@@ -161,16 +162,57 @@ footer{
 }
 
 .searchbar {
-  margin-top:10px;
+  margin-top:1px;
   display: flex;
   justify-content: center;
-  color: #ccc;
-
+  background-color: #ffffff;
+  width: 900px;
 }
 
-.seach-input {
-  border-radius: 55px;
-  border: 2px solid #ccc;
-  background-color: #ccc;
+.search-input {
+  
+  width: 100%;
+  padding: 10px; 
+  border: 1px solid #ccc;
+  border-radius: 10px; 
+  outline: none;
+  background-color:white;
+  color:#000000;
+}
+
+@media (max-width: 768px) {
+  .searchbar {
+   
+    width: 450px;
+  }
+  
+  .search-input {
+    font-size: 14px; 
+    padding: 8px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .searchbar {
+    width: 95%;
+    padding: 5px; 
+    width: 225px;
+  }
+
+  .search-input {
+    font-size: 14px; 
+    padding: 6px; 
+  }
+}
+
+select {
+  width: 150px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #ffffff;
   color: #000000;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 10px;;
 }
