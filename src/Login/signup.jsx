@@ -29,13 +29,14 @@ function SignUp() {
   };
 
   return (
-    <div className="card">
-      <h3>Sign Up</h3>
-      <form onSubmit={handleSubmit(handleSignUp)}>
+    <div className="container-fluid">
+      <form className="form-group" onSubmit={handleSubmit(handleSignUp)}>
+        <h3 id="signUpTitle">Sign Up</h3>
         <div style={{ textAlign: "left" }}>
           <label>Name</label>
           <br />
           <input
+            className="form-control signUp"
             type="text"
             placeholder="John Doe"
             id="name"
@@ -47,6 +48,7 @@ function SignUp() {
           <label>Email</label>
           <br />
           <input
+            className="form-control signUp"
             type="email"
             placeholder="johndoe@example.com"
             id="email"
@@ -64,6 +66,7 @@ function SignUp() {
           <label>Phone number</label>
           <br />
           <input
+            className="form-control signUp"
             type="text"
             placeholder="01XXXXXXXXX"
             id="number"
@@ -81,6 +84,7 @@ function SignUp() {
           <label>Password</label>
           <br />
           <input
+            className="form-control signUp"
             type="password"
             placeholder="Enter your password"
             id="password"
@@ -99,7 +103,7 @@ function SignUp() {
       <hr />
 
       <Link to="/login">Registered user? Log in!</Link>
-      <Link to="/homepage" style={{ color: "grey" }}>
+      <Link to="/homepage" style={{ color: "black" }}>
         or continue as guest
       </Link>
     </div>

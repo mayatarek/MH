@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import Productitem from "/src/ProductList/Productitem.jsx";
 import WishlistItem from "./WishListItem";
 
 function Wishlist() {
   const [listItems, setListItems] = useState([]);
   const [user, setUser] = useState(null); 
+  const Navigate = useNavigate();
 
   useEffect(() => { 
       const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser")); 
@@ -67,21 +68,15 @@ function Wishlist() {
     setListItems(listItems);
   };
 
+  useEffect(() => {
+    if (!user) {
+      console.log("Redirecting to login...");
+      Navigate("/login");
+    }
+  }, [user, Navigate]);
+
   return (
     <div>
-      {!user && (
-        <div>
-          <h2>Looks like you are not logged in</h2>
-          <br />
-          <button>
-            <Link to="/login">Log in</Link>
-          </button>
-          <br />
-          <h2>Or go back to the homepage as a guest</h2>
-          <br />
-          <Link to="/homepage">Continue as guest</Link>
-        </div>
-      )}
       {user && listItems.length > 0 && (     
           <>
           <h3>My Wishlist</h3>
