@@ -29,7 +29,7 @@ function ContactUs() {
                             <label htmlFor="message">Enter Message:</label>
                             <textarea className="form-control contact" id="message" rows="3"></textarea>
                         </div>
-                        <button type="submit" >Submit</button>
+                        <button type="submit" id="submitButton" >Submit</button>
                     </form>
 
                 </div>
