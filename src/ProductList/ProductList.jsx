@@ -3,6 +3,7 @@ import ProductItem from './ProductItem';
 import products from './products';
 import SearchBar from './SearchBar';
 import ShowSearchBar from './showsearchbar';
+import './ProductList.css' 
 
 function ProductList({ category }) {
   const [searchQuery, setSearchQuery] = useState('');
