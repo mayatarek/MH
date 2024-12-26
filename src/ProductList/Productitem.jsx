@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState} from 'react';
 import { Card, Button } from 'react-bootstrap';
 import './Productitem.css';
+import { useNavigate } from 'react-router-dom';
+
 
 function ProductItem({ product, liked, user }) {
   const [isLiked, setIsLiked] = useState(liked);
   const [message, showMessage] = useState(false);
   const [showDetails, setShowDetails] = useState(false); // State to toggle details visibility
+  const navigate = useNavigate();
 
   // Add to wishlist
   const addToWishlist = () => {
@@ -27,14 +30,14 @@ function ProductItem({ product, liked, user }) {
     setIsLiked(false);
   };
 
-  // Toggle product details
-  const toggleDetails = () => {
-    setShowDetails(!showDetails);
+  const handleCardClick = () => {
+    navigate(`/product/${product.id}`);
   };
+
 
   return (
     <div className="productItem">
-      <Card style={{ width: '22rem' }} className="product-card" onClick={toggleDetails}>
+      <Card style={{ width: '22rem' }} className="product-card" onClick={handleCardClick}>
       <div className="image-container">
           {/* Main Image */}
           <Card.Img variant="top" src={product.image} alt={product.name} className="product-image" />
@@ -47,7 +50,11 @@ function ProductItem({ product, liked, user }) {
           <Card.Text>{product.price}</Card.Text>
           {isLiked ? (
             <button
-              onClick={removeFromWishlist}
+           
+            onClick={(e) => {
+              e.stopPropagation(); // Prevent the card click event
+              removeFromWishlist();
+            }}
               className="liked"
               style={{ all: 'unset', color: 'red', cursor: 'pointer', fontSize: 30 }}
             >
@@ -55,7 +62,10 @@ function ProductItem({ product, liked, user }) {
             </button>
           ) : (
             <button
-              onClick={addToWishlist}
+            onClick={(e) => {
+              e.stopPropagation(); // Prevent the card click event
+              addToWishlist();
+            }}
               style={{ all: 'unset', cursor: 'pointer', fontSize: 30 }}
             >
               ♡
