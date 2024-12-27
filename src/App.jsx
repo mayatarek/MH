@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import './App.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 // import './tailwind.css';
 
@@ -23,6 +23,7 @@ import Bracelet from './ProductList/Bracelets/Bracelets.jsx'
 import Wishlist from './WishList/wishlist.jsx'
 import ProtectedRoutes from  "./ProtectedRoutes.jsx"
 import ProductDetails from './ProductList/productDetails.jsx';
+import Reserved from './ProductList/reserved.jsx'
 function App() {
  
 
@@ -49,6 +50,7 @@ function App() {
         <Route path="/necklaces" element={<Necklaces/>}/>
         <Route path="/bracelets" element={<Bracelet/>}/>
         <Route path="/wishlist" element={<Wishlist/>}/>
+        <Route path="/reserved" element={<Reserved />} />
 
         <Route path="/product/:id" element={<ProductDetails />} />
 

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link } from "react-router-dom";
 
+
 function Navbar({ user, setUser }) {
         // const [user, setUser] = useState(null); 
         // useEffect(() => { 
@@ -58,6 +59,11 @@ function Navbar({ user, setUser }) {
                                 Earrings
                             </Link>
                         </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/reserved">
+                                Reserved
+                            </Link>
+                        </li>   
                         <li className="nav-item">
                             <Link className="nav-link" to="/contactus">
                                 Contact Us
