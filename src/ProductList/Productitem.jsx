@@ -1,14 +1,21 @@
-import React, { useState} from 'react';
-import { Card, Button } from 'react-bootstrap';
+import React, { useState,useEffect } from 'react';
+import { Card } from 'react-bootstrap';
 import './Productitem.css';
 import { useNavigate } from 'react-router-dom';
 
-
 function ProductItem({ product, liked, user }) {
   const [isLiked, setIsLiked] = useState(liked);
+  const [reserved, setReserved] = useState(false); 
   const [message, showMessage] = useState(false);
-  const [showDetails, setShowDetails] = useState(false); // State to toggle details visibility
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (user) {
+      const reservedItems = JSON.parse(localStorage.getItem(`reserved_user${user.id}`)) || [];
+      const isReserved = reservedItems.some(item => item.id === product.id);
+      setReserved(isReserved);  // Update reserved state based on localStorage
+    }
+  }, [user, product.id]);
 
   // Add to wishlist
   const addToWishlist = () => {
@@ -30,15 +37,30 @@ function ProductItem({ product, liked, user }) {
     setIsLiked(false);
   };
 
+  const reserveproduct = () => {
+    if (!user) { showMessage(true); }
+    const reservedItems = JSON.parse(localStorage.getItem(`reserved_user${user.id}`)) || [];
+    if (!reservedItems.find((item) => item.id === product.id)) {
+      const updatedReservedItems = [...reservedItems, product];
+      localStorage.setItem(`reserved_user${user.id}`, JSON.stringify(updatedReservedItems));
+      setReserved(true); 
+    }
+  };
+
   const handleCardClick = () => {
     navigate(`/product/${product.id}`);
   };
 
+  useEffect(() => {
+    if (message) {
+      setTimeout(() => showMessage(false), 3000);
+    }
+  }, [message]);
 
   return (
     <div className="productItem">
       <Card style={{ width: '22rem' }} className="product-card" onClick={handleCardClick}>
-      <div className="image-container">
+        <div className="image-container">
           {/* Main Image */}
           <Card.Img variant="top" src={product.image} alt={product.name} className="product-image" />
           {/* Hover Image */}
@@ -50,11 +72,10 @@ function ProductItem({ product, liked, user }) {
           <Card.Text>{product.price}</Card.Text>
           {isLiked ? (
             <button
-           
-            onClick={(e) => {
-              e.stopPropagation(); // Prevent the card click event
-              removeFromWishlist();
-            }}
+              onClick={(e) => {
+                e.stopPropagation(); // Prevent the card click event
+                removeFromWishlist();
+              }}
               className="liked"
               style={{ all: 'unset', color: 'red', cursor: 'pointer', fontSize: 30 }}
             >
@@ -62,23 +83,37 @@ function ProductItem({ product, liked, user }) {
             </button>
           ) : (
             <button
-            onClick={(e) => {
-              e.stopPropagation(); // Prevent the card click event
-              addToWishlist();
-            }}
+              onClick={(e) => {
+                e.stopPropagation(); // Prevent the card click event
+                addToWishlist();
+              }}
               style={{ all: 'unset', cursor: 'pointer', fontSize: 30 }}
             >
               ♡
             </button>
           )}
-          {message && <p className="message">Please log in first to add to cart</p>}
-        </Card.Body>
 
-      
-        
+          <button
+            onClick={(e) => {
+              e.stopPropagation(); // Prevent the card click event
+              reserveproduct();
+            }}
+            style={{
+              all: 'unset',
+              cursor: reserved ? 'not-allowed' : 'pointer',
+              fontSize: 30,
+              color: reserved ? 'gray' : 'blue',
+            }}
+            disabled={reserved} // Disable button if reserved
+          >
+            {reserved ? 'Reserved' : 'Reserve'}
+          </button>
+          {message && <p className="message">Please log in first</p>}
+        </Card.Body>
       </Card>
     </div>
   );
 }
 
 export default ProductItem;
+
