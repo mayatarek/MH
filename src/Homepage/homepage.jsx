@@ -21,12 +21,14 @@ function Homepage() {
     };
 
     return (
-        <div className="container">
-          <div className="welcome-container">
+        <div className="container" >
+            {/* <img id="homePic" src="/src/assets/home2.jpg" alt="Homepage visual" /> */}
+            
+            <div className="welcome-container">
             {user ? (
               <div>
-                <h2 className="welcome-back">Welcome back, {user.name}!</h2>
-                <p className="welcome-message">Enjoy your personalized homepage.</p>
+                <h2 className="welcome-back">Welcome back, {user.name} ❤️</h2>
+                <p className="welcome-message"><img src="/src/assets/logo.png" style={{maxWidth: "4%", maxHeight:"4%",marginRight: "0%"}}  id="logo"></img> is happy you're back ☺ </p>
               </div>
             ) : (
               <div>
@@ -35,11 +37,7 @@ function Homepage() {
               </div>
             )}
           </div>
-    
-
-            <img id="homePic" src="/src/assets/home2.jpg" alt="Homepage visual" />
-
-            <div className="glamorous-quote"> <h2>"Elegance is not standing out, but being remembered."</h2> </div>
+            
 
             <Carousel activeIndex={index} onSelect={handleSelect}>
                 <Carousel.Item>
@@ -76,6 +74,10 @@ function Homepage() {
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
+            <div className="glamorous-quote"> <h2><em>"Elegance is not standing out, but being remembered."</em></h2> </div>
+
+            
+
             <div id="bestSellingSection">
                 <h3 className="bestSelling">
                     Best Selling Necklaces

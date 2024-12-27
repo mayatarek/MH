@@ -18,20 +18,21 @@ body {
     margin-top: 8%;
     
     color: #093621e1;
-    font-size: 50px;
+    font-size: 30px;
+    font-weight: bold;
 }
   
 .welcome-message{
     color: #777;
     font-size: 20px;
-
+    font-weight: lighter;
+   
 }
 
 .glamorous-quote{
     color: #093621e1;
     font-size: 50px;
     margin-bottom: 5%;
-
 
 }
 
