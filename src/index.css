@@ -247,9 +247,18 @@ select {
 
 .wishlist-page{
   background-color: white;
-  width: 1300px;
+  width: 2200px;
   padding: 20px;
   min-height: 100vh; 
   border-radius: 20px;
+  box-sizing: border-box;
+  
+}
+.containerwish
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; 
   box-sizing: border-box;
 }
