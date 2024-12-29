@@ -247,6 +247,7 @@ select {
 
 .wishlist-page{
   background-color: white;
+  width: 1300px;
   padding: 20px;
   min-height: 100vh; 
   border-radius: 20px;
