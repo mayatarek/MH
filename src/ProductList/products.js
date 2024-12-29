@@ -1,56 +1,56 @@
 const products = [
     {
         'id':'1',
-        'name': 'Elegant Necklace',
+        'name': 'Ocean Grace Pearl Choker',
         'type': 'necklace',
         'image': '../src/assets/necklace.jpeg',
         'details': 'A stunning piece that complements any outfit.',
-        'careTips': 'Keep away from water and perfume to maintain shine.',
-        'price': '120 £',
+        'careTips': 'A delicate pearl choker adorned with a captivating blue gemstone centerpiece. This design evokes serene oceanic beauty and adds a graceful touch to your look.',
+        'price': '150 £',
         
     },
     {
         'id':'2',
-        'name': 'Golden Necklace',
+        'name': 'Golden Radiance Pendant',
         'type': 'necklace',
         'image': '../src/assets/necklace2.jpeg',
-        'details': 'A perfect addition for formal occasions.',
+        'details': 'A sleek and timeless gold chain necklace with a radiant, starburst-inspired pendant encrusted with sparkling crystals, perfect for both formal and casual occasions.',
         'careTips': 'Wipe with a soft cloth after use.',
         'price': '150 £'
     },
     {
         'id':'3',
-        'name': 'Pearl Necklace',
+        'name': 'Regal Medallion Pearl Necklace',
         'type': 'necklace',
         'image': '../src/assets/necklace3.jpeg',
-        'details': 'A timeless piece featuring natural pearls.',
+        'details': 'A sophisticated dual-layered necklace combining elegant white pearls with gold accents. The design features intricate medallion charms, adding a touch of regal charm to any outfit.',
         'careTips': 'Store in a fabric-lined box to prevent scratches.',
         'price': '200 £'
     },
     {
         'id':'4',
-        'name': 'Silver Charm Necklace',
+        'name': 'Midnight Elegance Pendant',
         'type': 'necklace',
         'image': '../src/assets/necklace4.jpeg',
-        'details': 'A delicate necklace with a charm centerpiece.',
+        'details': 'A delicate gold chain necklace featuring a deep violet gemstone teardrop pendant. The understated design radiates elegance and charm, perfect for adding a touch of sophistication to any look.',
         'careTips': 'Avoid contact with harsh chemicals.',
-        'price': '95 £'
+        'price': '130 £'
     },
     {
         'id':'5',
-        'name': 'Vintage Gold Necklace',
+        'name': 'Blue Murano Glass Butterfly Necklace Set',
         'type': 'necklace',
         'image': '../src/assets/necklace5.jpeg',
-        'details': 'A vintage design with intricate details.',
+        'details': 'Transform into your best self with the Blue Murano Glass Butterfly Necklace Set. This set features the Blue Murano Glass Butterfly Dangle Charm paired with a sterling silver Curb Chain Necklace with a sliding clasp to adjust it to your ideal length. Add this set to your styling as a powerful symbol of hope, transformation and new beginnings.',
         'careTips': 'Clean with mild soap and a soft brush.',
         'price': '220 £'
     },
     {
         'id':'6',
-        'name': 'Crystal Pendant Necklace',
+        'name': 'Bold Classic Gold Chain',
         'type': 'necklace',
         'image': '../src/assets/necklace6.jpeg',
-        'details': 'A sparkling pendant necklace with crystals.',
+        'details': 'A timeless gold curb chain with a sleek and polished finish. This versatile piece exudes strength and confidence, making it a staple accessory for any wardrobe.',
         'careTips': 'Store in a dry place to maintain brilliance.',
         'price': '180 £'
     },
