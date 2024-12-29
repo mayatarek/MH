@@ -29,28 +29,28 @@ const products = [
     },
     {
         'id':'4',
-        'name': 'Silver Charm Necklace',
+        'name': 'Midnight Elegance Pendant',
         'type': 'necklace',
         'image': '../src/assets/necklace4.jpeg',
-        'details': 'A delicate necklace with a charm centerpiece.',
+        'details': 'A delicate gold chain necklace featuring a deep violet gemstone teardrop pendant. The understated design radiates elegance and charm, perfect for adding a touch of sophistication to any look.',
         'careTips': 'Avoid contact with harsh chemicals.',
-        'price': '95 £'
+        'price': '130 £'
     },
     {
         'id':'5',
-        'name': 'Vintage Gold Necklace',
+        'name': 'Blue Murano Glass Butterfly Necklace Set',
         'type': 'necklace',
         'image': '../src/assets/necklace5.jpeg',
-        'details': 'A vintage design with intricate details.',
+        'details': 'Transform into your best self with the Blue Murano Glass Butterfly Necklace Set. This set features the Blue Murano Glass Butterfly Dangle Charm paired with a sterling silver Curb Chain Necklace with a sliding clasp to adjust it to your ideal length. Add this set to your styling as a powerful symbol of hope, transformation and new beginnings.',
         'careTips': 'Clean with mild soap and a soft brush.',
         'price': '220 £'
     },
     {
         'id':'6',
-        'name': 'Crystal Pendant Necklace',
+        'name': 'Bold Classic Gold Chain',
         'type': 'necklace',
         'image': '../src/assets/necklace6.jpeg',
-        'details': 'A sparkling pendant necklace with crystals.',
+        'details': 'A timeless gold curb chain with a sleek and polished finish. This versatile piece exudes strength and confidence, making it a staple accessory for any wardrobe.',
         'careTips': 'Store in a dry place to maintain brilliance.',
         'price': '180 £'
     },
