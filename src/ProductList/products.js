@@ -56,39 +56,39 @@ const products = [
     },
     {
         'id':'7',
-        'name': 'Classic Earring',
+        'name': 'Round Huggie Hoop Earrings',
         'type': 'earring',
         'image': '../src/assets/earring.jpeg',
-        'details': 'Elegant and simple earrings for everyday wear.',
+        'details': 'Add a style staple to your collection with the Round Huggie Hoop Earrings. Crafted of our 14k gold-plated unique metal blend, these hoop earrings feature a rounded profile and a concave shape on the inside of the hoops. Inspired by nature organically beautiful forms, these curved, sculptural earrings bring a fresh take on modern minimalism. An effortless addition to any outfit, these huggie hoops complement any mood and offer layered elegance when stacked up the ear.',
         'careTips': 'Clean with a soft microfiber cloth.',
         'price': '50 £'
     },
     {
         'id':'8',
-        'name': 'Diamond Stud Earrings',
+        'name': 'Sparkling Bow Row Hoop Earrings',
         'type': 'earring',
         'image': '../src/assets/earring2.jpeg',
-        'details': 'Perfect studs with a classic diamond design.',
+        'details': 'Add a light-filled touch to your look with the Sparkling Bow Row Hoop Earrings. Featuring faceted stones that form bows on top of a hoop, this versatile style is crafted in sterling silver and shines with a cool glow. Perfect for wearing with casual outfits as well as on special occasions, the bow is a symbolic motif that always adds something extra to the everyday day. Style together with other bow pieces for a maximalist look or wear solo for a subtle take.',
         'careTips': 'Keep in a separate compartment to avoid scratches.',
         'price': '300 £'
     },
     {
         'id':'9',
-        'name': 'Hoop Earrings',
+        'name': 'Sparkling Heart Halo Stud Earrings',
         'type': 'earring',
         'image': '../src/assets/earring3.jpeg',
-        'details': 'Stylish hoop earrings for a bold look.',
+        'details': 'Express the depth of your love with the Sparkling Heart Halo Stud Earrings. These elegant sterling silver earrings each feature a heart-shaped cubic zirconia stone sparkling at the centre. A halo of smaller stones surrounds the heart, with outward-facing prongs on the stone settings creating a delicate cut-out effect. Pair them with the matching Sparkling Heart Halo Pendant Necklace to create an elevated and modern look.',
         'careTips': 'Avoid wearing during physical activities.',
-        'price': '75 £'
+        'price': '85 £'
     },
     {
         'id':'10',
-        'name': 'Rose Gold Earrings',
+        'name': 'Pavé Bow Drop Earrings',
         'type': 'earring',
         'image': '../src/assets/earring4.jpeg',
-        'details': 'Delicate rose gold earrings for a romantic touch.',
+        'details': 'Add a light-filled touch to your look with the Pavé Bow Drop Earrings. Featuring faceted stones that form a bow at the top, this versatile style features a row of sparkling pavé right below for extra sparkle. This eye-catching pair is crafted in sterling silver. Perfect for wearing with minimal outfits as well as on special occasions, the bow is a symbolic motif that always adds something extra to every outfit.',
         'careTips': 'Polish with a jewelry cleaning solution.',
-        'price': '130 £'
+        'price': '150 £'
     },
     {
         'id':'11',
@@ -198,6 +198,24 @@ const products = [
         'careTips': 'Store in a padded box to prevent damage.',
         'price': '95 £'
     },
+    {
+        'id':'23',
+        'name': 'Asymmetrical Heart Hoop Earrings',
+        'type': 'earring',
+        'image': '../src/assets/earring5.jpeg',
+        'details': 'Show your ears some love with these Asymmetrical Heart Hoop Earrings. Hand-finished in sterling silver, these small heart-shaped hoops will add a cool, minimal edge to any outfit. Team them with your go-to Pandora Moments bracelet and a Pandora O Pendant in sterling silver for a bold tonal look. Alternatively, gift these unique earrings to someone special to let them know how much you love them',
+        'careTips': 'Store in a padded box to prevent damage.',
+        'price': '55 £'
+    },
+    {
+        'id':'24',
+        'name': 'Sparkling Infinity Heart Stud Earrings',
+        'type': 'earring',
+        'image': '../src/assets/earring6.jpeg',
+        'details': 'Embodying timeless love, our Sparkling Infinity Heart Stud Earrings from the Pandora Moments collection fuse elegance with symbolism. Crafted from a unique 14k gold-plated blend, the openwork heart, adorned with 44 micro bead-set cubic zirconia, cradles an asymmetric infinity symbol. Not just earrings, but a poetic dance of eternal connection. Notice the intricate mirrored design; each pair tells a story of immeasurable love, binding souls together in a beautifully crafted reminder of deep, infinite bonds.',
+        'careTips': 'Store in a padded box to prevent damage.',
+        'price': '95 £'
+    }
 ];
 
 
