@@ -68,7 +68,7 @@ function Wishlist() {
   };
 
   return (
-    <div>
+    <div className="wishlist-page">
       {!user && (
         <div>
           <h2>Looks like you are not logged in</h2>
