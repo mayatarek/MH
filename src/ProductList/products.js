@@ -1,29 +1,29 @@
 const products = [
     {
         'id':'1',
-        'name': 'Elegant Necklace',
+        'name': 'Ocean Grace Pearl Choker',
         'type': 'necklace',
         'image': '../src/assets/necklace.jpeg',
         'details': 'A stunning piece that complements any outfit.',
-        'careTips': 'Keep away from water and perfume to maintain shine.',
-        'price': '120 £',
+        'careTips': 'A delicate pearl choker adorned with a captivating blue gemstone centerpiece. This design evokes serene oceanic beauty and adds a graceful touch to your look.',
+        'price': '150 £',
         
     },
     {
         'id':'2',
-        'name': 'Golden Necklace',
+        'name': 'Golden Radiance Pendant',
         'type': 'necklace',
         'image': '../src/assets/necklace2.jpeg',
-        'details': 'A perfect addition for formal occasions.',
+        'details': 'A sleek and timeless gold chain necklace with a radiant, starburst-inspired pendant encrusted with sparkling crystals, perfect for both formal and casual occasions.',
         'careTips': 'Wipe with a soft cloth after use.',
         'price': '150 £'
     },
     {
         'id':'3',
-        'name': 'Pearl Necklace',
+        'name': 'Regal Medallion Pearl Necklace',
         'type': 'necklace',
         'image': '../src/assets/necklace3.jpeg',
-        'details': 'A timeless piece featuring natural pearls.',
+        'details': 'A sophisticated dual-layered necklace combining elegant white pearls with gold accents. The design features intricate medallion charms, adding a touch of regal charm to any outfit.',
         'careTips': 'Store in a fabric-lined box to prevent scratches.',
         'price': '200 £'
     },
