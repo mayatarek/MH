@@ -16,14 +16,14 @@ Contact Us: Users can easily reach out for support through the "Contact Us" feat
 
 ## instructions for running the website
 
-1. Prerequisites
+#1. Prerequisites
 -Node.js: Ensure you have Node.js installed on your system (check with node -v).
 -npm or yarn: You’ll need a package manager like npm (default with Node.js) or yarn.
 
-2. Install Dependencies
+#2. Install Dependencies
 - npm install
 
-3. Run the Development Server
+#3. Run the Development Server
 - npm run dev
 
 
