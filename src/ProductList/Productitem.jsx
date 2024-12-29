@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Card } from 'react-bootstrap';
 import './Productitem.css';
 import { useNavigate } from 'react-router-dom';
@@ -25,7 +25,6 @@ function ProductItem({ product, liked, user }) {
     }
   }, [user, product.id]);
 
-  // Add to wishlist
   const addToWishlist = () => {
     if (!user) { showMessage(true); }
     const userWishlist = JSON.parse(localStorage.getItem(`wishlist_user${user.id}`)) || [];
@@ -36,7 +35,6 @@ function ProductItem({ product, liked, user }) {
     }
   };
 
-  // Remove from wishlist
   const removeFromWishlist = () => {
     if (!user) return;
     let userWishlist = JSON.parse(localStorage.getItem(`wishlist_user${user.id}`)) || [];
@@ -45,7 +43,7 @@ function ProductItem({ product, liked, user }) {
     setIsLiked(false);
   };
 
-  const reserveproduct = () => {
+  const reserveProduct = () => {
     if (!user) { showMessage(true); }
     const reservedItems = JSON.parse(localStorage.getItem(`reserved_user${user.id}`)) || [];
     if (!reservedItems.find((item) => item.id === product.id)) {
@@ -69,52 +67,38 @@ function ProductItem({ product, liked, user }) {
     <div className="productItem">
       <Card style={{ width: '22rem' }} className="product-card" onClick={handleCardClick}>
         <div className="image-container">
-          {/* Main Image */}
           <Card.Img variant="top" src={product.image} alt={product.name} className="product-image" />
-          {/* Hover Image */}
           <Card.Img variant="top" src={product.hoverImage} alt={product.name} className="hover-image" />
         </div>
+
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            isLiked ? removeFromWishlist() : addToWishlist();
+          }}
+          className="heart-button"
+        >
+          {isLiked ? '♥' : '♡'}
+        </button>
 
         <Card.Body>
           <Card.Title>{product.name}</Card.Title>
           <Card.Text>{product.price}</Card.Text>
-          {isLiked ? (
-            <button
-              onClick={(e) => {
-                e.stopPropagation();
-                removeFromWishlist();
-              }}
-              className="liked"
-              style={{ all: 'unset', color: 'red', cursor: 'pointer', fontSize: 30 }}
-            >
-              ♥
-            </button>
-          ) : (
-            <button
-              onClick={(e) => {
-                e.stopPropagation(); 
-                addToWishlist();
-              }}
-              style={{ all: 'unset', cursor: 'pointer', fontSize: 30 }}
-            >
-              ♡
-            </button>
-          )}
 
           <button
             onClick={(e) => {
               e.stopPropagation(); 
-              reserveproduct();
+              reserveProduct();
             }}
             style={{
               all: 'unset',
               cursor: reserved ? 'not-allowed' : 'pointer',
-              fontSize: 30,
+              fontSize: 15,
               color: reserved ? 'gray' : '#093621e1',
             }}
             disabled={reserved} 
           >
-            {reserved ? 'Reserved' : 'Reserve'}
+            {reserved ? 'Reserved' : 'Reserve '}
           </button>
           {message && <p className="message">Please log in first</p>}
         </Card.Body>
@@ -124,4 +108,3 @@ function ProductItem({ product, liked, user }) {
 }
 
 export default ProductItem;
-

@@ -1,3 +1,5 @@
+import './wishlistitem.css';
+import { Card } from 'react-bootstrap';
 
 
 // function WishlistItem({ picture, name, price }) {
@@ -17,11 +19,28 @@ function WishlistItem({ product}) {
 
   return (
     <div className="productItem">
-    <img src={product.image} alt={product.name} className="image" />
-    <h2>{product.name}</h2>
-    <p>{product.price}</p>
-    <button>More Details</button> <span>  </span>
-  </div>
+      <Card style={{ width: '22rem' }} className="product-card">
+        <div className="image-container">
+          <Card.Img variant="top" src={product.image} alt={product.name} className="product-image" />
+          <Card.Img variant="top" src={product.hoverImage} alt={product.name} className="hover-image" />
+        </div>
+
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            isLiked ? removeFromWishlist() : addToWishlist();
+          }}
+          className="heart-button"
+        >
+        </button>
+
+        <Card.Body>
+          <Card.Title>{product.name}</Card.Title>
+          <Card.Text>{product.price}</Card.Text>
+
+        </Card.Body>
+      </Card>
+    </div>
   );
 }
 

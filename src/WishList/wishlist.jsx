@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import Productitem from "/src/ProductList/Productitem.jsx";
 import WishlistItem from "./WishListItem";
+import { Card } from 'react-bootstrap';
+
 
 function Wishlist() {
   const [listItems, setListItems] = useState([]);
@@ -86,6 +88,7 @@ function Wishlist() {
         {user && listItems.length > 0 && (
           <>
             <h3>My Wishlist</h3>
+            <div id="wishList">
             {listItems.map((product, index) => (
               <div key={index}>
                 <WishlistItem product={product} />
@@ -102,6 +105,7 @@ function Wishlist() {
                 </button>
               </div>
             ))}
+            </div>
           </>
         )}
         {user && listItems.length === 0 && (
