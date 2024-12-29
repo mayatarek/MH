@@ -73,6 +73,7 @@ function Homepage() {
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
+            <br></br> <br></br>
             <div className="glamorous-quote"> <h2><em>"Elegance is not standing out, but being remembered."</em></h2> </div>
 
             
