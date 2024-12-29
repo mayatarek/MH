@@ -34,6 +34,7 @@ h1 {
   font-size: 3.2em;
   line-height: 1.5;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #093621e1;
 }
 
 .reserved {
@@ -114,7 +115,7 @@ button:focus-visible {
 
 
 #logInNav{  
-  color: #000;
+  color: black;
   margin-right: 30px;
 }
 
@@ -128,10 +129,12 @@ button:focus-visible {
 
 .contactUsTitle{
   margin-bottom: 7%;
+  color: #093621e1;
 }
 
 #submitButton{
   border-radius: 10px;
+  background-color: #093621e1;
 }
 
 
@@ -164,8 +167,8 @@ footer{
 
 #logInButton, #signUpButton{
   background-color: white;
-  border-color: black;
-  color:#000;
+  border-color: #093621e1;
+  color:#093621e1;;
   border-radius: 10px;
 }
 

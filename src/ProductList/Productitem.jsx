@@ -102,7 +102,7 @@ function ProductItem({ product, liked, user }) {
               all: 'unset',
               cursor: reserved ? 'not-allowed' : 'pointer',
               fontSize: 30,
-              color: reserved ? 'gray' : 'blue',
+              color: reserved ? 'gray' : '#093621e1',
             }}
             disabled={reserved} 
           >

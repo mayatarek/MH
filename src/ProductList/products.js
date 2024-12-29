@@ -184,7 +184,32 @@ const products = [
         'careTips': 'Store in a padded box to prevent damage.',
         'price': '110 £'
     },
+    {
+        'id':'21',
+        'name': 'Clear Sparkling Crown Solitaire Ring',
+        'type': 'ring',
+        'image': '../src/assets/ring6.jpeg',
+        'details': 'This solitaire ring, hand-finished in 14k gold-plated metal, features a large clear cubic zirconia center stone set in a crown-shaped claw setting.',
+        'careTips': 'Store in a padded box to prevent damage.',
+        'price': '115 £'
+    },
+    {
+        'id':'22',
+        'name': 'Clear Sparkling Crown Solitaire Ring',
+        'type': 'ring',
+        'image': '../src/assets/ring7.jpeg',
+        'details': 'This solitaire ring, hand-finished in 14k gold-plated metal, features a large clear cubic zirconia center stone set in a crown-shaped claw setting.',
+        'careTips': 'Store in a padded box to prevent damage.',
+        'price': '115 £'
+    },
 ];
+
+
+products.forEach(
+    product => { const imagePath = product.image; 
+        const hoverImagePath = imagePath.replace('.jpeg', '_1.jpeg'); 
+        product.hoverImage = hoverImagePath; 
+});
 
 export default products;
 
