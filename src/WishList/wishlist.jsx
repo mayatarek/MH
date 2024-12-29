@@ -68,57 +68,54 @@ function Wishlist() {
   };
 
   return (
-    <div className="wishlist-page">
-      {!user && (
-        <div>
-          <h2>Looks like you are not logged in</h2>
-          <br />
-          <button>
-            <Link to="/login">Log in</Link>
-          </button>
-          <br />
-          <h2>Or go back to the homepage as a guest</h2>
-          <br />
-          <Link to="/homepage">Continue as guest</Link>
-        </div>
-      )}
-      {user && listItems.length > 0 && (     
+    <div className="containerwish">
+      <div className="wishlist-page">
+        {!user && (
+          <div>
+            <h2>Looks like you are not logged in</h2>
+            <br />
+            <button>
+              <Link to="/login">Log in</Link>
+            </button>
+            <br />
+            <h2>Or go back to the homepage as a guest</h2>
+            <br />
+            <Link to="/homepage">Continue as guest</Link>
+          </div>
+        )}
+        {user && listItems.length > 0 && (
           <>
-          <h3>My Wishlist</h3>
-          
-          {/* <ul>  */}
-              {listItems.map((product, index) => ( 
-                  // <li key={index}> 
-                      <div key={index}> 
-                          <WishlistItem product={product}/>
-                          <button onClick={() => removeFromWishlist(index)}
-                          style={{ all: 'unset', color: 'red', cursor: 'pointer', fontSize: 30 }}
-                          >
-                          ♥
-                          </button>
-                          {/* <button onClick={() => removeFromWishlist(index)}>Remove</button> */}
-                      </div> 
-                  /* </li> */ ))} 
-          {/* </ul> */}
+            <h3>My Wishlist</h3>
+            {listItems.map((product, index) => (
+              <div key={index}>
+                <WishlistItem product={product} />
+                <button
+                  onClick={() => removeFromWishlist(index)}
+                  style={{
+                    all: "unset",
+                    color: "red",
+                    cursor: "pointer",
+                    fontSize: 30,
+                  }}
+                >
+                  ♥
+                </button>
+              </div>
+            ))}
           </>
-      
-       )}
-      {user && listItems.length === 0 && (
-        <div>
-          <h3>
-            You have not added anything to your wishlist yet :/ Browse our
-            products and add what you like to your wishlist using the ♡ icon!
-          </h3>
-          <Link to="/homepage">Back to Homepage</Link>
-        </div>
-      )} 
+        )}
+        {user && listItems.length === 0 && (
+          <div>
+            <h3>
+              You have not added anything to your wishlist yet :/ Browse our
+              products and add what you like to your wishlist using the ♡ icon!
+            </h3>
+            <Link to="/homepage">Back to Homepage</Link>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
 
 export default Wishlist;
-
-
-
-
-
