@@ -1,7 +1,6 @@
 import HomepageList from "./HomepageList";
 import { useState, useEffect } from 'react';
 import Carousel from 'react-bootstrap/Carousel'; // Importing Bootstrap Carousel
-
 import './homepage.css';
 
 function Homepage() {
@@ -81,12 +80,13 @@ function Homepage() {
             <div id="bestSellingSection">
                 <h3 className="bestSelling">
                     Best Selling Necklaces
+                    <HomepageList category={"necklace"}/>
                 </h3>
                 <HomepageList key={'necklace'} />
                 <h3 className="bestSelling">
                     Best Selling Earrings
                 </h3>
-                <HomepageList key={'earring'} />
+                <HomepageList category={"earring"}/>
             </div>
         </div>
     );

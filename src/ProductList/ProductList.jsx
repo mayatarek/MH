@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import ProductItem from './ProductItem';
+import ProductItem from './Productitem';
 import products from './products';
 import SearchBar from './SearchBar';
 import ShowSearchBar from './showsearchbar';

@@ -73,7 +73,7 @@ function ProductItem({ product, liked, user }) {
           {isLiked ? (
             <button
               onClick={(e) => {
-                e.stopPropagation(); // Prevent the card click event
+                e.stopPropagation();
                 removeFromWishlist();
               }}
               className="liked"
@@ -84,7 +84,7 @@ function ProductItem({ product, liked, user }) {
           ) : (
             <button
               onClick={(e) => {
-                e.stopPropagation(); // Prevent the card click event
+                e.stopPropagation(); 
                 addToWishlist();
               }}
               style={{ all: 'unset', cursor: 'pointer', fontSize: 30 }}
@@ -95,7 +95,7 @@ function ProductItem({ product, liked, user }) {
 
           <button
             onClick={(e) => {
-              e.stopPropagation(); // Prevent the card click event
+              e.stopPropagation(); 
               reserveproduct();
             }}
             style={{
@@ -104,7 +104,7 @@ function ProductItem({ product, liked, user }) {
               fontSize: 30,
               color: reserved ? 'gray' : 'blue',
             }}
-            disabled={reserved} // Disable button if reserved
+            disabled={reserved} 
           >
             {reserved ? 'Reserved' : 'Reserve'}
           </button>
