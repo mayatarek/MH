@@ -16,7 +16,16 @@ Contact Us: Users can easily reach out for support through the "Contact Us" feat
 
 ## instructions for running the website
 
-First, when the user enters for the first time, they can browse the jewelry as needed and even search. However, they will not be able to add items to the wishlist or reserve them. If they wish to do so, they should sign up, create an account, and log in. Once logged in, they will have access to all the personalized features, including adding items to the wishlist and using the reserve feature.
+## 1. Prerequisites
+- Node.js: Ensure you have Node.js installed on your system (check with node -v).
+- npm or yarn: You’ll need a package manager like npm (default with Node.js) or yarn.
+
+## 2. Install Dependencies
+- npm install
+
+## 3. Run the Development Server
+- npm run dev
+
 
 ## External used liberaries
 React-bootstrap:
