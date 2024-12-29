@@ -74,15 +74,15 @@ function Wishlist() {
       <div className="wishlist-page">
         {!user && (
           <div>
-            <h2>Looks like you are not logged in</h2>
+            <h2 className="wishlistheader">Looks like you are not logged in</h2>
             <br />
-            <button>
+            <button> 
               <Link to="/login">Log in</Link>
             </button>
             <br />
-            <h2>Or go back to the homepage as a guest</h2>
-            <br />
-            <Link to="/homepage">Continue as guest</Link>
+            <br></br>
+            <h2 className="wishlistheader">Or go back to the homepage as a guest</h2>
+            <Link to="/homepage" style={{color:'#093621'}}>Continue as guest</Link>
           </div>
         )}
         {user && listItems.length > 0 && (

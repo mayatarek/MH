@@ -262,3 +262,8 @@ select {
   min-height: 100vh; 
   box-sizing: border-box;
 }
+
+.wishlistheader
+{
+  color:#093621e1;
+}
