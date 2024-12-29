@@ -46,7 +46,7 @@ function Reserved() {
   };
 
   return (
-    <div>
+    <div className="reserved-container">
       {reservedItems.length > 0 ? (
         <div>
           <h2 className="reserved">Your Reserved Items are Ready! 🌟 Come Visit Our Store and Claim Them – We Can’t Wait to See You! 🎉</h2>
