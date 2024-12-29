@@ -26,13 +26,13 @@ function Homepage() {
             <div className="welcome-container">
             {user ? (
               <div>
-                <h2 className="welcome-back">Welcome back, {user.name} ❤️</h2>
+                <h2 className="welcome-back" style={{color:'#093621',fontWeight:'bold',fontFamily: "'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif"}}>Welcome back, {user.name} ❤️</h2>
                 <p className="welcome-message"><img src="/src/assets/logo.png" style={{maxWidth: "4%", maxHeight:"4%",marginRight: "0%"}}  id="logo"></img> is happy you're back ☺ </p>
               </div>
             ) : (
               <div>
                 <h2 className="welcome-back">Welcome to our homepage!</h2>
-                <p className="welcome-message">Please log in to access personalized features.</p>
+                <p className="welcome-message"  style={{color:'#0c462be1'}}>Please log in to access personalized features.</p>
               </div>
             )}
           </div>
