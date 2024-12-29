@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ProductItem from "../ProductList/Productitem"
 import products from "../ProductList/products"
+import "./homepageList.css"
 function HomepageList({ category }) {
     const [randomProducts, setRandomProducts] = useState([]);
 
@@ -12,6 +13,7 @@ function HomepageList({ category }) {
     }, [category]);
 
     return (
+
         <div className="homepage-list">
             {randomProducts.map((product) => (
                 <ProductItem
