@@ -1,26 +1,27 @@
+import React, { useState, useEffect } from 'react';
+import ProductItem from "../ProductList/Productitem"
+import products from "../ProductList/products"
+function HomepageList({ category }) {
+    const [randomProducts, setRandomProducts] = useState([]);
 
+    useEffect(() => {
+        //select three random items
+        const filteredProducts = products.filter((product) => product.type === category);
+        const shuffledProducts = filteredProducts.sort(() => 0.5 - Math.random());
+        setRandomProducts(shuffledProducts.slice(0, 3)); 
+    }, [category]);
 
-function HomepageList(props){
-    //fetch based on props from local storage
-    //reuse product card for prodcuts
-
-    return(
-        <div>
-        <div >
-            Item 1
+    return (
+        <div className="homepage-list">
+            {randomProducts.map((product) => (
+                <ProductItem
+                    key={product.id}
+                    product={product}
+                    user={JSON.parse(localStorage.getItem('loggedInUser'))}
+                />
+            ))}
         </div>
-        <div >
-            Item 2
-        </div>
-        <div>
-            Item 3
-        </div>
-        <div>
-            Item 4
-        </div>
-        </div>
-
-    )
+    );
 }
 
-export default HomepageList
+export default HomepageList;
