@@ -74,15 +74,8 @@ function Wishlist() {
       <div className="wishlist-page">
         {!user && (
           <div>
-            <h2 className="wishlistheader">Looks like you are not logged in</h2>
-            <br />
-            <button> 
-              <Link to="/login">Log in</Link>
-            </button>
-            <br />
-            <br></br>
-            <h2 className="wishlistheader">Or go back to the homepage as a guest</h2>
-            <Link to="/homepage" style={{color:'#093621'}}>Continue as guest</Link>
+            <h2 style={{color:'#093621',fontWeight:'bold',fontFamily: "'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif"}}>Oops you're not logged in 😭! </h2>
+           
           </div>
         )}
         {user && listItems.length > 0 && (
@@ -110,11 +103,11 @@ function Wishlist() {
         )}
         {user && listItems.length === 0 && (
           <div>
-            <h3>
+            <h3 style={{color:'#093621',fontWeight:'bold',fontFamily: "'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif"}}>
               You have not added anything to your wishlist yet :/ Browse our
               products and add what you like to your wishlist using the ♡ icon!
             </h3>
-            <Link to="/homepage">Back to Homepage</Link>
+            <Link to="/homepage" style={{color:'#093621'}}>Back to Homepage</Link>
           </div>
         )}
       </div>

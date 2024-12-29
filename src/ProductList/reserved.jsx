@@ -48,7 +48,16 @@ function Reserved() {
 
   return (
     <div className="reserved-container">
-      {reservedItems.length > 0 ? (
+       {!user && (
+          <div>
+            <h2 
+            style={{color:'#093621',fontWeight:'bold',fontFamily: "'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif"}}>
+            Oops you're not logged in 😭! 
+            </h2>
+           
+          </div>
+        )}
+      {user && reservedItems.length > 0 ?(
         <div>
           <h2 className="reserved">Your Reserved Items are Ready! Come Visit Our Store and Claim Them</h2>
           <div className="reservedList"> 
@@ -61,9 +70,9 @@ function Reserved() {
           ))}
           </div>
         </div>
-      ) : (
+      ) : user && reservedItems.length === 0 ? (
         <p className="reserved">Looks like your reserved list is empty! Explore our collection and reserve your favorites today to secure them before they sell out!💖</p>
-      )}
+      ) :null}
     </div>
   );
 }

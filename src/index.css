@@ -267,3 +267,14 @@ select {
 {
   color:#093621e1;
 }
+
+
+.reserved-container
+{
+  background-color: white;
+  width: 1300px;
+  padding: 20px;
+  min-height: 100vh; 
+  border-radius: 20px;
+  box-sizing: border-box;
+}
