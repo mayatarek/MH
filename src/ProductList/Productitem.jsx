@@ -17,6 +17,14 @@ function ProductItem({ product, liked, user }) {
     }
   }, [user, product.id]);
 
+  useEffect(() => {
+    if (user) {
+      const userWishlist = JSON.parse(localStorage.getItem(`wishlist_user${user.id}`)) || [];
+      const isProductLiked = userWishlist.some(item => item.id === product.id);
+      setIsLiked(isProductLiked);  // Update liked state based on localStorage
+    }
+  }, [user, product.id]);
+
   // Add to wishlist
   const addToWishlist = () => {
     if (!user) { showMessage(true); }
