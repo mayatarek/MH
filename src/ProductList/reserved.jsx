@@ -50,7 +50,7 @@ function Reserved() {
     <div className="reserved-container">
       {reservedItems.length > 0 ? (
         <div>
-          <h2 className="reserved">Your Reserved Items are Ready! 🌟 Come Visit Our Store and Claim Them – We Can’t Wait to See You! 🎉</h2>
+          <h2 className="reserved">Your Reserved Items are Ready! Come Visit Our Store and Claim Them</h2>
           <div className="reservedList"> 
           {reservedItems.map((item) => (
             <ReservedItem 

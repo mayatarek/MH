@@ -3,7 +3,7 @@ function ReservedItem({ product, removeItemFromReserved }) {
     return (
       <div className="productItem">
         <img src={product.image} alt={product.name} className="product-image" />
-        <h2>{product.name}</h2>
+        <h4>{product.name}</h4>
         <p>{product.price}</p>
         <button 
           onClick={() => removeItemFromReserved(product.id)} 
