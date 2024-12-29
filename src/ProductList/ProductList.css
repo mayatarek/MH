@@ -5,6 +5,13 @@
     padding: 1.5rem;
     
   }
+
+  .reservedList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
   
   .sort-name,
   .sort-price {

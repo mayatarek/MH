@@ -1,7 +1,8 @@
+import './Productitem.css';
 function ReservedItem({ product, removeItemFromReserved }) {
     return (
       <div className="productItem">
-        <img src={product.image} alt={product.name} className="image" />
+        <img src={product.image} alt={product.name} className="product-image" />
         <h2>{product.name}</h2>
         <p>{product.price}</p>
         <button 

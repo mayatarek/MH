@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import ReservedItem from "./reserveditem"; 
+import './ProductList.css' 
 
 function Reserved() {
   const [reservedItems, setReservedItems] = useState([]);
@@ -50,6 +51,7 @@ function Reserved() {
       {reservedItems.length > 0 ? (
         <div>
           <h2 className="reserved">Your Reserved Items are Ready! 🌟 Come Visit Our Store and Claim Them – We Can’t Wait to See You! 🎉</h2>
+          <div className="reservedList"> 
           {reservedItems.map((item) => (
             <ReservedItem 
               key={item.id} 
@@ -57,6 +59,7 @@ function Reserved() {
               removeItemFromReserved={removeItemFromReserved} 
             />
           ))}
+          </div>
         </div>
       ) : (
         <p className="reserved">Looks like your reserved list is empty! Explore our collection and reserve your favorites today to secure them before they sell out!💖</p>
