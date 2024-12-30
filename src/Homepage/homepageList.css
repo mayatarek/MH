@@ -1,8 +1,8 @@
 .homepage-list {
-    display: flex; /* Use flexbox for alignment */
-    gap: 16px; /* Add spacing between items */
-    justify-content: space-between; /* Distribute space evenly */
-    padding: 10px; /* Optional: Add padding */
-    overflow-x: auto; /* Optional: Enable horizontal scrolling if needed */
+    display: flex; 
+    gap: 16px; 
+    justify-content: space-between; 
+    padding: 10px; 
+    overflow-x: auto; 
 }
 
